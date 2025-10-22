@@ -17,7 +17,7 @@ slug: tema1
 * **Según su organización**
     * **SECUENCIALES**: No se puede saltar.
     * **ALEATORIOS**: Se puede saltar.
-    * **INDEXADOS**: Se puede saltar gracias a un INDICE.
+    * **INDEXADOS**: Se puede saltar gracias a un índice.
 
 **ASCII**
 
