@@ -61,20 +61,20 @@ slug: tema2
 
 ### Teoría de conjuntos
 
-#### Unión (compatible): A U B. 
+#### Unión (compatible): `A U B`. 
 Incluye todas las tuplas de A y todas las tuplas de B. No incluye las tuplas repetidas.
 > Dos tablas son compatibles si tienen el mismo número y tipo de columnas.
 
-#### Intersección (compatible): A ^ B. 
+#### Intersección (compatible): `A ^ B`. 
 Incluye todas las tuplas que pertenezcan a la vez a los conjuntos A y B.
 
-#### Diferencia (compatible): A - B. 
+#### Diferencia (compatible): `A - B`. 
 Incluye todas las tuplas de A que no aparecen en B.
 
-#### Producto cartesiano: A x B. 
+#### Producto cartesiano: `A x B`. 
 Incluye la combinación de cada tupla de A con todas las tuplas de B.
 
-#### Conjunto vacío:
+#### Conjunto vacío `∅`:
 Aquél conjunto que no contiene elementos. Es un resultado válido.
 
 
