@@ -8,6 +8,8 @@
 
     let { data }: Props = $props();
     const post: BlogPost = data.post;
+    let btn: HTMLButtonElement;
+    let back: HTMLAnchorElement
 </script>
 
 <svelte:head>
@@ -17,11 +19,16 @@
 
 <div class="min-h-screen bg-background">
     <div class="max-w-4xl mx-auto px-6 py-12">
-        <a href="/" class="inline-flex items-center gap-2 text-accent hover:text-accent/80 font-medium mb-8 transition-colors group">
+        <a href="/" class="inline-flex items-center gap-2 text-accent hover:text-accent/80 font-medium mb-8 transition-colors group"
+        
+        onmouseenter={() => back.classList.add('back-hover')}
+        onmouseleave={() => back.classList.remove('back-hover')}
+        bind:this={back}
+        >
             <svg class="w-4 h-4 transition-transform group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
             </svg>
-            Back to all posts
+            Volver al índice
         </a>
 
         <article class="prose prose-stone prose-lg max-w-none">
@@ -56,11 +63,27 @@
         </article>
         <div class="flex justify-center mt-16">
             <button
-                class="px-6 py-2 rounded-full bg-accent text-accent-foreground font-semibold shadow-card hover:bg-accent/90 transition-colors"
+                class="px-6 py-2 rounded-full bg-accent text-accent-foreground font-semibold shadow-card transition-all duration-200 cursor-pointer"
                 onclick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                style="will-change: transform, box-shadow;"
+                onmouseenter={() => btn.classList.add('glow')}
+                onmouseleave={() => btn.classList.remove('glow')}
+                bind:this={btn}
             >
-                ↑ Back to top
+                ↑ Volver arriba
             </button>
         </div>
+<style>
+    .glow {
+        transform: scale(1.02);
+        box-shadow: 0 0 0 0.35rem rgba(15, 118, 110, 0.25), 0 4px 24px 0 rgba(0,0,0,0.08);
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .back-hover {
+        transform: scale(1.05);
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+</style>
     </div>
 </div>

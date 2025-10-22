@@ -79,7 +79,6 @@
 		color: #6b7280;
 	}
 
-	/* Updated hover color for modern card-based layout */
 	a:hover h2 {
 		color: #007bff;
 	}

@@ -5,19 +5,19 @@ author: Santi Rivera
 slug: tema1
 ---
 
-## 1.1 FICHERO 
+## 1.1 - Ficheros
 
 **Definición:** Estructura de datos organizada, almacenada en un dispositivo de almacenamiento. Se caracterizan por su tipo y extensión, que determina su formato. Son creados y gestionados por el S.O.
 
-**TIPOS**
+**Tipos**
 
 * **Según su contenido**
-    * BINARIO
-    * TEXTO
+    * Binario
+    * Texto
 * **Según su organización**
-    * **SECUENCIALES**: No se puede saltar.
-    * **ALEATORIOS**: Se puede saltar.
-    * **INDEXADOS**: Se puede saltar gracias a un índice.
+    * **Secuenciales**: No se puede saltar.
+    * **Aleatorios**: Se puede saltar.
+    * **Indexados**: Se puede saltar gracias a un índice.
 
 **ASCII**
 
@@ -25,7 +25,7 @@ slug: tema1
 * 2^8 = 256 caracteres.
 * **Ejemplo:** "A" en ASCII es 65 (decimal), que en binario es 0100 0001. Esto se puede ver en la calculadora del ordenador, opción "programador".
 
-**FICHEROS SECUENCIALES**
+**Ficheros Secuenciales**
 
 Los símbolos delimitadores son elegidos por el usuario y ocupan el espacio de campo, registro y EOF.
 
@@ -34,7 +34,7 @@ Los símbolos delimitadores son elegidos por el usuario y ocupan el espacio de c
 * **EOF (end of file)** ($): final del fichero.
 * Si no se desea poner nada en uno de los campos, se debe usar doble símbolo.
 
-**FICHEROS DIRECTOS O ALEATORIOS**
+**Ficheros Directos o Aleatorios**
 
 Se basan en el conocimiento previo del tamaño en bytes de los campos y, por lo tanto, del tamaño de los registros.
 
@@ -45,7 +45,7 @@ Se basan en el conocimiento previo del tamaño en bytes de los campos y, por lo 
     * El registro completo tendrá un tamaño de 18 bytes (suma de los campos).
 * Para ir al tercer registro y al nombre: `18 x 2 + 10 = 46 bytes`.
 
-**FICHEROS IDEXADOS (Indexados)**
+**Ficheros Indexados**
 
 Se componen de dos partes:
 
@@ -53,13 +53,13 @@ Se componen de dos partes:
 2.  **Fichero de datos/Campos**: Estos ficheros no tienen que tener tamaño fijo.
 * Se caracterizan por tener un dato relevante, y el fichero del índice es aleatorio.
 
-## 1.2. CONCEPTOS DE BASE DE DATOS.
+## 1.2 - Conceptos de Bases de Datos.
 
 **Definición:** Conjunto de datos con una estructura propia pertenecientes a un mismo problema.
 
 * **Más utilizados:** Bases de datos relacionales (tablas, relaciones y coherencia).
 
-**CONCEPTOS**
+**Conceptos**
 
 * **Datos tipo:** texto, numérico o fecha.
 * **Campo/columna/atributo:** Todos los datos a los que se da el mismo nombre (ejemplo: edad, fecha, nombre).
@@ -72,7 +72,7 @@ Se componen de dos partes:
 * **Script/procedimiento:** Pequeños trozos de código para programar las bases de datos.
 * **Esquema:** Conjunto de todos los elementos anteriores.
 
-**LÍNEA DE TIEMPO**
+**Línea de Tiempo**
 
 * **Antes de 1950:** No existen las BD, solo Ficheros.
 * **1960:** Inicio BD jerárquicas y de red.
@@ -81,7 +81,7 @@ Se componen de dos partes:
 * **1990:** Inicio BD paralelas y orientadas a objetos.
 * **2000:** NoSQL.
 
-## 1.3. SISTEMA GESTOR DE BASE DE DATOS (SGBD)
+## 1.3. Sistema Gestor de Bases de Datos (SGBD)
 
 **Definición:** Conjunto de herramientas que facilitan el trabajo con base de datos.
 
@@ -89,21 +89,28 @@ Se componen de dos partes:
 * Utilizan lenguajes de programación como PL-SQL, Python, PhP, C++... para realizar scripts de base de datos y acceder a los mismos.
 * Pueden pertenecer al ámbito de escritorio o ser online.
 
-**COMPONENTES**
+**Componentes**
 
 * **Datos/esquemas:** Valores/estructura.
 * **Herramientas de acceso a datos:** Lenguajes para crear, leer y modificar datos y metadatos. Diccionario de datos.
 * **Utilidades:** Pequeñas aplicaciones para modificar datos, estructuras, copias de seguridad, etc.
 
-**TIPOS DE SGBD**
+**Tipos de SGBD**
 
-* **OFIMÁTICOS:** (Access + VB)
-* **EMPRESARIALES:** (Oracle + PL/SQL, Microsoft SQL Server, MySQL, +SQL, PostgreSQL, PgPl/SQL...)
-* **SEGÚN EL TIPO DE CLIENTE**
+* **Ofimáticos:** 
+    * Access + VB
+
+* **Empresariales:** 
+    * Oracle + PL/SQL
+    * Microsoft SQL Server
+    * MySQL + SQL
+    * PostgreSQL + PgPl/SQL...
+
+* **Según el tipo de cliente**
     * Gráfico
     * Modo texto
 
-**FUNCIONES**
+**Funciones**
 
 * Independizar los datos y hacerlos accesibles mediante conectores
 * Manejar datos y esquemas de forma concurrente, eficiente y sencilla
@@ -112,57 +119,57 @@ Se componen de dos partes:
 * Transacciones (ejemplo: cajeros de banco)
 * Monitorización y estadísticas de uso
 
-**EJEMPLOS DE SGBD**
+**Ejemplos de SGBD**
 
 | SGBD | Características | Tipo |
 | :--- | :--- | :--- |
-| **MySQL** | Permite elegir distintos mecanismos de almacenamiento por tabla. Ofrece transacciones ACID y claves foráneas. Alta compatibilidad y portabilidad. | Relacional |
-| **PostgreSQL** | Soporte fuerte para extensiones y tipos de datos avanzados. Cumplimiento robusto de estándares SQL y mejor soporte para características complejas del SQL. Control de concurrencia mediante MVCC que mejora el manejo de transacciones paralelas sin bloqueos excesivos. | Relacional |
-| **SQL Server** | Integración profunda con el ecosistema Microsoft. Buenas herramientas de administración visual. Alto soporte para transacciones, replicación, clustering, integridad referencial, etc. | Relacional |
-| **SQLite** | Biblioteca embebida (“in-process”), ligera y sin servidor externo. Ideal para aplicaciones locales de bajo o medio volumen, dispositivos móviles o escritorio. Soporta transacciones ACID aunque tiene limitaciones para concurrencia pesada. | Relacional |
-| **ORACLE** | Muy buen soporte para funciones avanzadas, optimización de consultas, particionamiento, etc. Alta escalabilidad y fiabilidad en entornos empresariales. Extenso sistema de seguridad, roles, auditoría y soporte transaccional sofisticado. | Relacional |
-| **MariaDB** | Variante “fork” de MySQL con compatibilidad, pero mejoras. Soporte para distintos motores de almacenamiento como MyRocks, Aria, etc. Comunidad activa y mejoras continuas, manteniendo compatibilidad con MySQL en muchos casos. | Relacional |
-| **Redis** | Base de datos en memoria (muy alta velocidad). Soporte para múltiples estructuras de datos (listas, hashes, sets, sorted sets, bitmaps, etc.). Persistencia opcional, replicación, clustering, alta disponibilidad. | NoSQL |
-| **MongoDB** | Modelo de documentos (JSON / BSON), sin esquema rígido. Capacidad de escalado horizontal vía fragmentación (“sharding”). Indexado flexible, consultas adhoc, agregaciones potentes. | NoSQL |
-| **Cassandra** | Distribuido, sin punto único de fallo (arquitectura “masterless”). Modelo de columnas anchas, optimizado para escrituras intensivas. Alta escalabilidad horizontal y disponibilidad configurable de consistencia. | NoSQL |
-| **Neo4j** | Base de datos de grafos: representa datos como nodos, relaciones y propiedades. Lenguaje de consulta Cypher para explorar relaciones de forma eficiente. Cumple ACID, buena para consultas de rutas, redes sociales, recomendaciones. | NoSQL |
+| **MySQL** | Permite elegir distintos mecanismos de almacenamiento por tabla. Ofrece transacciones ACID y claves foráneas. Alta compatibilidad y portabilidad. | **Relacional** |
+| **PostgreSQL** | Soporte fuerte para extensiones y tipos de datos avanzados. Cumplimiento robusto de estándares SQL y mejor soporte para características complejas del SQL. Control de concurrencia mediante MVCC que mejora el manejo de transacciones paralelas sin bloqueos excesivos. | **Relacional** |
+| **SQL Server** | Integración profunda con el ecosistema Microsoft. Buenas herramientas de administración visual. Alto soporte para transacciones, replicación, clustering, integridad referencial, etc. | **Relacional** |
+| **SQLite** | Biblioteca embebida (“in-process”), ligera y sin servidor externo. Ideal para aplicaciones locales de bajo o medio volumen, dispositivos móviles o escritorio. Soporta transacciones ACID aunque tiene limitaciones para concurrencia pesada. | **Relacional** |
+| **ORACLE** | Muy buen soporte para funciones avanzadas, optimización de consultas, particionamiento, etc. Alta escalabilidad y fiabilidad en entornos empresariales. Extenso sistema de seguridad, roles, auditoría y soporte transaccional sofisticado. | **Relacional** |
+| **MariaDB** | Variante “fork” de MySQL con compatibilidad, pero mejoras. Soporte para distintos motores de almacenamiento como MyRocks, Aria, etc. Comunidad activa y mejoras continuas, manteniendo compatibilidad con MySQL en muchos casos. | **Relacional** |
+| **Redis** | Base de datos en memoria (muy alta velocidad). Soporte para múltiples estructuras de datos (listas, hashes, sets, sorted sets, bitmaps, etc.). Persistencia opcional, replicación, clustering, alta disponibilidad. | **NoSQL** |
+| **MongoDB** | Modelo de documentos (JSON / BSON), sin esquema rígido. Capacidad de escalado horizontal vía fragmentación (“sharding”). Indexado flexible, consultas adhoc, agregaciones potentes. | **NoSQL** |
+| **Cassandra** | Distribuido, sin punto único de fallo (arquitectura “masterless”). Modelo de columnas anchas, optimizado para escrituras intensivas. Alta escalabilidad horizontal y disponibilidad configurable de consistencia. | **NoSQL** |
+| **Neo4j** | Base de datos de grafos: representa datos como nodos, relaciones y propiedades. Lenguaje de consulta Cypher para explorar relaciones de forma eficiente. Cumple ACID, buena para consultas de rutas, redes sociales, recomendaciones. | **NoSQL** |
 
-## 1.4. MODELADO DE DATOS
+## 1.4. Modelado de datos
 
 **Modelar:** Representar de forma ordenada un problema/idea/servicio mediante abstracciones que proporcionan almacenes/bases de datos.
 
-**A TENER EN CUENTA**
+**A tener en cuenta:**
 
 * Todo parte de una entrevista personal con un experto en el problema.
 * El modelado no es personal; existen estándares.
 * Se deben conocer las características técnicas del SGBD.
 * Conocimiento del lenguaje (lenguajes de programación BD - PL/SQL, lenguajes de programación estándar - Python)
 
-**MODELADOS, siguiendo el proceso de creación de BD relacionales**
+**Modelados siguiendo el proceso de creación de BD relacionales**
 
 1.  **Conceptual:** No incluye datos técnicos. Debe ser expresivo y negociado con el cliente, entendible para el experto no informático
-    * **MODELO:** Diagrama E/R.
+    * **Modelo:** Diagrama E/R.
 2.  **Lógico:** Más técnico, dependiente del tipo de base de datos. Adaptación del lenguaje natural al SGBD
-    * **MODELO:** MR (Modelo Relacional) para BBDD Relacionales de Peter Chen.
+    * **Modelo:** MR (Modelo Relacional) para BBDD Relacionales de Peter Chen.
 3.  **Físico:** Totalmente dependiente del SGBD y del lenguaje. Genera la BD real.
-    * **MODELO:** SQL + Programación de Base de Datos.
+    * **Modelo:** SQL + Programación de Base de Datos.
 
 **Tipos de modelos (según orden de creación de la BD)**:
 
-* **CONCEPTUALES**:
+* **Conceptuales**:
     * Modelo E-R (entidades, relacionales y atributos).
     * Modelo orientado a objetos (UML, datos y operaciones).
-* **LÓGICOS**:
+* **Lógicos**:
     * Jerárquico (árbol).
     * En red (grafo no lineal, más de un padre).
     * Relacional (tablas, claves univocas).
-* **FÍSICOS**: SQL sobre un SGBD empresarial concreto.
+* **Físicos**: SQL sobre un SGBD empresarial concreto.
 
 ## SQL
 
 Lenguaje de base de datos para interactuar desde SGBD relacionales con los datos, las tablas, etc. Está estandarizado por la ISO.
 
-**SUBLENGUAJES**:
+**Sublenguajes**:
 
 * **DDL (Definición de datos):** Diseñador de BD (CREATE, DROP).
 * **DML (Manipulación de datos):** Usuarios o programas de BD (SELECT, INSERT, UPDATE, DELETE).
@@ -170,8 +177,6 @@ Lenguaje de base de datos para interactuar desde SGBD relacionales con los datos
 * **DCL (Control de acceso a datos):** Administrador BD (GRANT, REVOKE).
 
 ## 1.4 Base de datos en la nube.
-
-### EL CIBERDATO
 
 Se describen tres modelos de servicio de computación en la nube: IaaS, PaaS y SaaS.
 
@@ -196,7 +201,7 @@ Se describen tres modelos de servicio de computación en la nube: IaaS, PaaS y S
 
 ## 1.5 Protección de datos
 
-### LA LEY
+### La ley
 
 Existen leyes a nivel estatal y europeo, siendo las últimas modificaciones del año 2018 en ambas.
 
@@ -205,7 +210,7 @@ Existen leyes a nivel estatal y europeo, siendo las últimas modificaciones del 
 * **A nivel España:** Agencia Española de Protección de datos, Ley Orgánica de Protección de Datos Personales y Garantía de los Derechos Digitales (LOPDGDD).
     * **Características:** Registro y tratamiento de datos, Evaluaciones de impacto (qué se hace con los datos y cómo se trabaja con ellos), Existencia obligatoria del delegado de protección de datos en empresas, Notificaciones por violación (cómo notificar el robo de datos a los afectados), Cooperación y coordinación con la Agencia Española de Protección de datos.
 
-### DERECHO “AL OLVIDO” (Derecho de Supresión)
+### Derecho al olvido (Derecho de supresión)
 
 El derecho de supresión, conectado con el denominado “derecho al olvido” por el RGPD, obliga al responsable del tratamiento que haya hecho públicos datos personales a indicar a otros responsables que supriman todo enlace, copia o réplica de tales datos.
 
