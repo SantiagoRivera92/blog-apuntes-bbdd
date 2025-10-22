@@ -8,8 +8,8 @@
 </script>
 
 <svelte:head>
-    <title>BlogApuntes</title>
-    <meta name="description" content="Thoughts, notes, and ideas" />
+    <title>Blog DAW</title>
+    <meta name="description" content="Apuntes de Bases de Datos" />
 </svelte:head>
 
 <div class="min-h-screen bg-background">
