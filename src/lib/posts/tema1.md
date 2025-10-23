@@ -1,6 +1,6 @@
 ---
 title: Tema 1 - Almacenamiento de datos
-date: 2025-10-22
+date: 2025-10-20
 author: Santi Rivera
 slug: tema1
 ---

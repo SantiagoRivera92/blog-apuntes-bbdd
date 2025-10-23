@@ -1,6 +1,6 @@
 ---
 title: Tema 2 - Bases de datos relacionales
-date: 2025-10-22
+date: 2025-10-21
 author: Santi Rivera
 slug: tema2
 ---
