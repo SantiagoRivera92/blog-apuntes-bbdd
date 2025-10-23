@@ -5,11 +5,11 @@ author: Santi Rivera
 slug: intro
 ---
 
-# Apuntes
+## Apuntes
 
 Si tienes algo en tus apuntes que no aparezca en el blog, puedes pasármelo a Teams (`SANTIAGO.RIVALV`) y lo incluiré. La idea es que todos tengamos apuntes lo más completos posibles.
 
-# Imágenes
+## Imágenes
 
 Si tienes alguna imagen en tus apuntes y quieres que aparezca en el blog, se pueden incorporar sin problema.
 
