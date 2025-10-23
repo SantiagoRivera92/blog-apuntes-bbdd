@@ -9,13 +9,13 @@ slug: tema2
 
 ### Base de datos relacional
 
-#### Colección de datos con una estructura basada en relaciones entre entidades/tablas y restricciones en campos/datos.
+##### Colección de datos con una estructura basada en relaciones entre entidades/tablas y restricciones en campos/datos.
 
-#### Su seguridad se basa en: integridad, confidencialidad y disponibilidad.
+##### Su seguridad se basa en: integridad, confidencialidad y disponibilidad.
 
-- Integridad: los datos tienen que ser veraces, sin discrepancias entre los datos.
-- Confidencialidad: los datos sólo serán accesibles por las personas con privilegios para ello.
-- Disponibilidad: los datos deberían estar siempre disponibles.
+- **Integridad**: los datos tienen que ser veraces, sin discrepancias entre los datos.
+- **Confidencialidad**: los datos sólo serán accesibles por las personas con privilegios para ello.
+- **Disponibilidad**: los datos deberían estar siempre disponibles.
 - No existe redundancia de datos, o si existe hay que minimizarla lo máximo posible.
 - Etapas para crear una BD relacional: conceptual, lógica y física.
 
@@ -30,21 +30,21 @@ slug: tema2
 
 ### Clave primaria: 
 
-#### La clave de la relación será el conjunto mínimo de atributos que identifica de forma unívoca cada tupla
+La clave de la relación será el conjunto mínimo de atributos que identifica de forma unívoca cada tupla
 
 ### Clave ajena
 
-#### Conjunto no vacío de atributos cuyos valores coinciden normalmente con la clave primaria de otra relación o tabla permitiendo establecer relaciones.
+Conjunto no vacío de atributos cuyos valores coinciden normalmente con la clave primaria de otra relación o tabla permitiendo establecer relaciones.
 
 ## 2.4: Restricciones
 
 ### Inherentes al modelo
 
-#### Diferencias entre una relación y una tabla
+##### Diferencias entre una relación y una tabla
 
 ### Semánticas 
 
-#### Reflejadas en el diseño de la base de datos
+##### Reflejadas en el diseño de la base de datos
 
 - **UNIQUE** (no duplicado)
 - **NOT NULL** (no vacío)
@@ -57,7 +57,7 @@ slug: tema2
 
 ## 2.5 Operaciones de conjuntos
 
-#### La base matemática de nuestro esquema
+##### La base matemática de nuestro esquema
 
 ### Teoría de conjuntos
 
@@ -76,5 +76,3 @@ Incluye la combinación de cada tupla de A con todas las tuplas de B.
 
 #### Conjunto vacío `∅`:
 Aquél conjunto que no contiene elementos. Es un resultado válido.
-
-

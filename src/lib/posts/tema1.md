@@ -148,9 +148,13 @@ Se componen de dos partes:
 **A tener en cuenta:**
 
 * Todo parte de una entrevista personal con un experto en el problema.
-* El modelado no es personal; existen estándares.
+* El modelado no es personal, existen estándares.
 * Se deben conocer las características técnicas del SGBD.
-* Conocimiento del lenguaje (lenguajes de programación BD - PL/SQL, lenguajes de programación estándar - Python)
+* Conocimiento del lenguaje 
+    - Lenguajes de programación BD 
+        - **PL/SQL**
+    - Lenguajes de programación estándar 
+        - **Python**
 
 **Modelados siguiendo el proceso de creación de BD relacionales**
 
@@ -219,9 +223,9 @@ Existen leyes a nivel estatal y europeo, siendo las últimas modificaciones del 
 
 ### Derecho al olvido (Derecho de supresión)
 
-El derecho de supresión, conectado con el denominado “derecho al olvido” por el RGPD, obliga al responsable del tratamiento que haya hecho públicos datos personales a indicar a otros responsables que supriman todo enlace, copia o réplica de tales datos.
+El derecho de supresión, conectado con el denominado "derecho al olvido" por el RGPD, obliga al responsable del tratamiento que haya hecho públicos datos personales a indicar a otros responsables que supriman todo enlace, copia o réplica de tales datos.
 
-Última modificación: 8 de marzo de 2024.
+Última modificación: **8 de marzo de 2024**.
 
 Se puede ejercitar ante la persona responsable solicitando la supresión de los datos personales cuando concurra alguna de las siguientes circunstancias:
 
