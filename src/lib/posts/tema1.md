@@ -124,18 +124,18 @@ Se componen de dos partes:
 
 **Ejemplos de SGBD**
 
-| SGBD | Características | Tipo |
-| :--- | :--- | :--- |
-| **MySQL** | Permite elegir distintos mecanismos de almacenamiento por tabla. Ofrece transacciones ACID y claves foráneas. Alta compatibilidad y portabilidad. | **Relacional** |
-| **PostgreSQL** | Soporte fuerte para extensiones y tipos de datos avanzados. Cumplimiento robusto de estándares SQL y mejor soporte para características complejas del SQL. Control de concurrencia mediante MVCC que mejora el manejo de transacciones paralelas sin bloqueos excesivos. | **Relacional** |
-| **SQL Server** | Integración profunda con el ecosistema Microsoft. Buenas herramientas de administración visual. Alto soporte para transacciones, replicación, clustering, integridad referencial, etc. | **Relacional** |
-| **SQLite** | Biblioteca embebida (“in-process”), ligera y sin servidor externo. Ideal para aplicaciones locales de bajo o medio volumen, dispositivos móviles o escritorio. Soporta transacciones ACID aunque tiene limitaciones para concurrencia pesada. | **Relacional** |
-| **ORACLE** | Muy buen soporte para funciones avanzadas, optimización de consultas, particionamiento, etc. Alta escalabilidad y fiabilidad en entornos empresariales. Extenso sistema de seguridad, roles, auditoría y soporte transaccional sofisticado. | **Relacional** |
-| **MariaDB** | Variante “fork” de MySQL con compatibilidad, pero mejoras. Soporte para distintos motores de almacenamiento como MyRocks, Aria, etc. Comunidad activa y mejoras continuas, manteniendo compatibilidad con MySQL en muchos casos. | **Relacional** |
-| **Redis** | Base de datos en memoria (muy alta velocidad). Soporte para múltiples estructuras de datos (listas, hashes, sets, sorted sets, bitmaps, etc.). Persistencia opcional, replicación, clustering, alta disponibilidad. | **NoSQL** |
-| **MongoDB** | Modelo de documentos (JSON / BSON), sin esquema rígido. Capacidad de escalado horizontal vía fragmentación (“sharding”). Indexado flexible, consultas adhoc, agregaciones potentes. | **NoSQL** |
-| **Cassandra** | Distribuido, sin punto único de fallo (arquitectura “masterless”). Modelo de columnas anchas, optimizado para escrituras intensivas. Alta escalabilidad horizontal y disponibilidad configurable de consistencia. | **NoSQL** |
-| **Neo4j** | Base de datos de grafos: representa datos como nodos, relaciones y propiedades. Lenguaje de consulta Cypher para explorar relaciones de forma eficiente. Cumple ACID, buena para consultas de rutas, redes sociales, recomendaciones. | **NoSQL** |
+| SGBD | Imagen | Características | Tipo |
+| :--- | :--- | :--- | :--- |
+| **MySQL** | ![MySQL](/images/tema1/mysql.jpg) |Permite elegir distintos mecanismos de almacenamiento por tabla. Ofrece transacciones ACID y claves foráneas. Alta compatibilidad y portabilidad. | **Relacional** |
+| **PostgreSQL** | ![PostgreSQL](/images/tema1/postgresql.jpg) | Soporte fuerte para extensiones y tipos de datos avanzados. Cumplimiento robusto de estándares SQL y mejor soporte para características complejas del SQL. Control de concurrencia mediante MVCC que mejora el manejo de transacciones paralelas sin bloqueos excesivos. | **Relacional** |
+| **SQL Server** | ![SQL Server](/images/tema1/sqlserver.jpg) | Integración profunda con el ecosistema Microsoft. Buenas herramientas de administración visual. Alto soporte para transacciones, replicación, clustering, integridad referencial, etc. | **Relacional** |
+| **SQLite** | ![SQLite](/images/tema1/sqlite.jpg) | Biblioteca embebida (“in-process”), ligera y sin servidor externo. Ideal para aplicaciones locales de bajo o medio volumen, dispositivos móviles o escritorio. Soporta transacciones ACID aunque tiene limitaciones para concurrencia pesada. | **Relacional** |
+| **ORACLE** | ![ORACLE](/images/tema1/oracle.jpg) | Muy buen soporte para funciones avanzadas, optimización de consultas, particionamiento, etc. Alta escalabilidad y fiabilidad en entornos empresariales. Extenso sistema de seguridad, roles, auditoría y soporte transaccional sofisticado. | **Relacional** |
+| **MariaDB** | ![MariaDB](/images/tema1/mariadb.jpg) | Variante “fork” de MySQL con compatibilidad, pero mejoras. Soporte para distintos motores de almacenamiento como MyRocks, Aria, etc. Comunidad activa y mejoras continuas, manteniendo compatibilidad con MySQL en muchos casos. | **Relacional** |
+| **Redis** | ![Redis](/images/tema1/redis.jpg) | Base de datos en memoria (muy alta velocidad). Soporte para múltiples estructuras de datos (listas, hashes, sets, sorted sets, bitmaps, etc.). Persistencia opcional, replicación, clustering, alta disponibilidad. | **NoSQL** |
+| **MongoDB** | ![MongoDB](/images/tema1/mongodb.jpg) | Modelo de documentos (JSON / BSON), sin esquema rígido. Capacidad de escalado horizontal vía fragmentación (“sharding”). Indexado flexible, consultas adhoc, agregaciones potentes. | **NoSQL** |
+| **Cassandra** | ![Cassandra](/images/tema1/cassandra.jpg) | Distribuido, sin punto único de fallo (arquitectura “masterless”). Modelo de columnas anchas, optimizado para escrituras intensivas. Alta escalabilidad horizontal y disponibilidad configurable de consistencia. | **NoSQL** |
+| **Neo4j** | ![Neo4j](/images/tema1/neo4j.jpg) |Base de datos de grafos: representa datos como nodos, relaciones y propiedades. Lenguaje de consulta Cypher para explorar relaciones de forma eficiente. Cumple ACID, buena para consultas de rutas, redes sociales, recomendaciones. | **NoSQL** |
 
 ## 1.4. Modelado de datos
 
