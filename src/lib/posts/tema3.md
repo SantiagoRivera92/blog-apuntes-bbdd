@@ -73,5 +73,5 @@ slug: tema3
     - `Mecánico reparar Coche` (atributo fecha para la relación reparar)
 - El dominio es el tipo de dato o conjunto de valores del atributo.
 - Tipos de atributos: 
-    - Obligatorios
-    - Opcionales
+    - **Obligatorios** (Deben estar para que la entrada de datos sea válida)
+    - **Opcionales** (Pueden contener `NULL`)
