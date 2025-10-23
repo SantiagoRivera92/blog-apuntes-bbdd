@@ -54,15 +54,15 @@ Generalmente, deberían usarse **solo** relaciones reflexivas o binarias.
 
 #### Tipos de cardinalidad reflexiva y Binarias
 
-- 1:1
+- **1:1**
     - Cada una de las ocurrencias de la entidad solo puede relacionarse con una ocurrencia de la entidad relacionada.
         - `Director dirigir Instituto`
 
-- 1:N
+- **1:N**
     - Cada una de las ocurrencias de la entidad puede relacionarse con varias ocurrencias de la entidad relacionada, mientras que la entidad relacionada sólo puede con una ocurrencia concreta.
         - `Tutor acompañar Alumno`
 
-- N:M
+- **N:M**
     - Varios a varios.
         - `Persona jugar Juego`
         - `Pieza componer Pieza`
