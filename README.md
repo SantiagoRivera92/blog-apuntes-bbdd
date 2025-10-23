@@ -1,38 +1,52 @@
-# sv
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+# Blog Apuntes
 
-## Creating a project
+Modern SvelteKit blog/notes app with TypeScript, TailwindCSS, mdsvex, modular components, and smooth view transitions.
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Features
 
-```sh
-# create a new project in the current directory
-npx sv create
+- **SvelteKit**: File-based routing, SSR, and view transitions.
+- **TypeScript**: Type safety throughout the codebase.
+- **TailwindCSS**: Custom theme, typography, and accent colors.
+- **mdsvex**: Markdown rendering for posts and notes.
+- **Modular Components**: BlogPost, PostHeader, PostContent, BackToTopButton for maintainable UI.
+- **Dynamic Routing**: Supports `/blog/[category]/[slug]` for posts.
+- **View Transitions**: Smooth navigation animations using SvelteKit's API.
+- **ESLint & Prettier**: Code quality and formatting enforced.
 
-# create a new project in my-app
-npx sv create my-app
+## Getting Started
+
+Install dependencies:
+
+```bash
+npm install
 ```
 
-## Developing
+Start the development server:
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```sh
+```bash
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
 
-## Building
+Build for production:
 
-To create a production version of your app:
-
-```sh
+```bash
 npm run build
 ```
 
-You can preview the production build with `npm run preview`.
+Preview production build:
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+```bash
+npm run preview
+```
+
+## Project Structure
+
+- `src/routes/` — SvelteKit pages and layouts
+- `src/lib/components/` — Modular Svelte components
+- `src/lib/types/` — TypeScript types
+- `.github/copilot-instructions.md` — Project setup checklist
+
+## Documentation
+
+See `.github/copilot-instructions.md` for setup and development best practices.

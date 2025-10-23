@@ -1,7 +1,7 @@
 import type { PageServerLoad } from './$types';
 import type { BlogPostMetadata } from '$lib/types/blog';
 
-type ListedBlogPost = Omit<BlogPostMetadata, 'description'>; 
+type ListedBlogPost = Omit<BlogPostMetadata, 'description'>;
 
 export const load: PageServerLoad = async () => {
     const allPostFiles = import.meta.glob('/src/lib/posts/*.md');
