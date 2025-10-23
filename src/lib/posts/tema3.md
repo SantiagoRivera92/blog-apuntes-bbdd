@@ -46,7 +46,7 @@ slug: tema3
 
 - La cardinalidad pertenece a las relaciones
 - Representa el máximo de ocurrencias en relación con una ocurrencia de la entidad seleccionada. Se calcula como el máximo de la participación de cada entidad afectada.
-- Se indica encima o debajo de la relación como 1:1, 1:N o N:M indicando el número de ocurrencias relacionadas con el resto de entidades.
+- Se indica encima o debajo de la relación como `1:1, 1:N o N:M`, indicando el número de ocurrencias relacionadas con el resto de entidades.
 
 #### Tipos de cardinalidad reflexiva y Binarias
 
