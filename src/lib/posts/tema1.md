@@ -23,6 +23,9 @@ slug: tema1
 
 * 1 byte = 1 carácter = 8 bits.
 * 2^8 = 256 caracteres.
+
+![Tabla ASCII](/images/tema1/ascii.jpg)
+
 * **Ejemplo:** "A" en ASCII es 65 (decimal), que en binario es 0100 0001. Esto se puede ver en la calculadora del ordenador, opción "programador".
 
 **Ficheros Secuenciales**
