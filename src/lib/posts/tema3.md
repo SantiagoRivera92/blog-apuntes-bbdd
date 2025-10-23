@@ -69,7 +69,8 @@ slug: tema3
 
 - Los atributos de una entidad son las características que la definen, los datos relevantes para resolver el problema y sus exigencias. Se representan con elipses.
 - De entre todos los atributos, un grupo de ellos permitirán obtener el resto mediante una función unívoca, ésta es la denominada clave. Se representa añadiendo subrayado. No puede ser repetido en 2 o más tuplas.
-- Las relaciones también pueden tener atributos. Mecánico reparar Coche (atributo fecha para la relación reparar)
+- Las relaciones también pueden tener atributos. 
+    - `Mecánico reparar Coche` (atributo fecha para la relación reparar)
 - El dominio es el tipo de dato o conjunto de valores del atributo.
 - Tipos de atributos: 
     - Obligatorios
