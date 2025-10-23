@@ -24,7 +24,7 @@ slug: tema3
 
 #### Tipos de relaciones según el grado de la relación (número de entidades que forman parte)
 
-- Unarias o reflexivas: Una entidad que se relaciona consigo misma. (Rey, ser hijo de; empleado, es jefe de.)
+- Unarias o reflexivas: Una entidad que se relaciona consigo misma. (`Rey`, `ser hijo de`; `empleado`, `es jefe de`.)
 - Binarias: 2 entidades relacionadas.
 - Ternarias: 3 entidades relacionadas.
 - N-arias: más de 3 entidades relacionadas.
