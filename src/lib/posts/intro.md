@@ -13,6 +13,4 @@ Si tienes algo en tus apuntes que no aparezca en el blog, puedes pasármelo a Te
 
 Si tienes alguna imagen en tus apuntes y quieres que aparezca en el blog, se pueden incorporar sin problema
 
-<div style="text-align: center;">
-  <img src="/images/intro/jackfrost.jpg" alt="Jack Frost winking" />
-</div>
+![Jack Frost winking](/images/intro/jackfrost.jpg)

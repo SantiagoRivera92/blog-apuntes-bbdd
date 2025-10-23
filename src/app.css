@@ -32,6 +32,11 @@
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
   .glow {
     transform: scale(1.02);
