@@ -84,38 +84,44 @@ Generalmente, deberían usarse **solo** relaciones reflexivas o binarias.
 
 ### Ejemplos de entidades y sus atributos
 
-- **Persona**
-    | Atributo | Tipo | Dominio | Clave | Obligatorio |
-    | :--- | :--- | :--- | :--- | :--- |
-    | **DNI** | Texto (9) | - | ✅ | ✅ |
-    | **Nombre** | Texto (20) | - | ❌ | ✅ |
-    | **Apellido1** | Texto (20) | - | ❌ | ✅ |
-    | **Apellido2** | Texto (20) | - | ❌ | ❌ |
-    | **FechaNacimiento** | Fecha | - | ❌ | ✅ |
+</br>
 
-- **Hotel**
-    | Atributo | Tipo | Dominio | Clave | Obligatorio |
-    | :--- | :--- | :--- | :--- | :--- |
-    | **id** | Numérico | 0-500000 | ✅ | ✅ |
-    | **Nombre** | Texto (50) | - | ❌ | ✅ |
-    | **Director** | Texto (50) | - | ❌ | ✅ |
-    | **Num_Habitaciones** | Numérico | 0-20000 | ❌ | ✅ |
+**Persona**
 
-- **Libro**
-    | Atributo | Tipo | Dominio | Clave | Obligatorio |
-    | :--- | :--- | :--- | :--- | :--- |
-    | **ISBN** | Texto (15) | - | ✅ | ✅ |
-    | **Nombre** | Texto (50) | - | ❌ | ✅ |
-    | **Páginas** | Número | 0-2000 | ❌ | ✅ |
-    | **Autor** | Texto (50) | - | ❌ | ✅ |
-    | **Editorial** | Texto (50) | - | ❌ | ✅ |
+| Atributo | Tipo | Dominio | Clave | Obligatorio |
+| :--- | :--- | :--- | :--- | :--- |
+| **DNI** | Texto (9) | - | ✅ | ✅ |
+| **Nombre** | Texto (20) | - | ❌ | ✅ |
+| **Apellido1** | Texto (20) | - | ❌ | ✅ |
+| **Apellido2** | Texto (20) |  | ❌ | ❌ |
+| **FechaNacimiento** | Fecha | - | ❌ | ✅ |
 
-- `Pedido incluir Producto`
-    | Atributo | Tipo | Dominio | Clave | Obligatorio |
-    | :--- | :--- | :--- | :--- | :--- |
-    | **id_producto** | Número | 0-999999999 | ✅ | ✅ |
-    | **id_pedido** | Número | 0-999999999 | ✅ | ✅ |
-    | **id_almacen** | Número | 0-50000 | ✅ | ✅ |
-    | **FechaEntrega** | Fecha | - | ❌ | ✅ |
+**Hotel**
+
+| Atributo | Tipo | Dominio | Clave | Obligatorio |
+| :--- | :--- | :--- | :--- | :--- |
+| **id** | Numérico | 0-500000 | ✅ | ✅ |
+| **Nombre** | Texto (50) | - | ❌ | ✅ |
+| **Director** | Texto (50) | - | ❌ | ✅ |
+| **Num_Habitaciones** | Numérico | 0-20000 | ❌ | ✅ |
+
+**Libro**
+
+| Atributo | Tipo | Dominio | Clave | Obligatorio |
+| :--- | :--- | :--- | :--- | :--- |
+| **ISBN** | Texto (15) | - | ✅ | ✅ |
+| **Nombre** | Texto (50) | - | ❌ | ✅ |
+| **Páginas** | Número | 0-2000 | ❌ | ✅ |
+| **Autor** | Texto (50) | - | ❌ | ✅ |
+| **Editorial** | Texto (50) | - | ❌ | ✅ |
+
+`Pedido incluir Producto`
+
+| Atributo | Tipo | Dominio | Clave | Obligatorio |
+| :--- | :--- | :--- | :--- | :--- |
+| **id_producto** | Número | 0-999999999 | ✅ | ✅ |
+| **id_pedido** | Número | 0-999999999 | ✅ | ✅ |
+| **id_almacen** | Número | 0-50000 | ✅ | ✅ |
+| **FechaEntrega** | Fecha | - | ❌ | ✅ |
     
 La idea de `Pedido incluir Producto` es que los pedidos pueden incluir distintos productos que son enviados desde distintos almacenes y por tanto llegan en distintas fechas.
