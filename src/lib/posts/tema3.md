@@ -115,11 +115,27 @@ Generalmente, deberían usarse **solo** relaciones reflexivas o binarias.
 
 `Pedido incluir Producto`
 
+**Producto**
+
+| Atributo | Tipo | Dominio | Clave | Obligatorio |
+| :--- | :--- | :--- | :--- | :--- |
+| **id_producto** | Número | 0-999999999 | ✅ | ✅ |
+| **Nombre** | Texto (200) | - | ✅ | ✅ |
+| **Precio** | Número con decimal | 0-99999 | ✅ | ✅ |
+
+**Pedido**
+
+| Atributo | Tipo | Dominio | Clave | Obligatorio |
+| :--- | :--- | :--- | :--- | :--- |
+| **id_cliente** | Número | 0-999999999 | ✅ | ✅ |
+
+**incluir**
+
 | Atributo | Tipo | Dominio | Clave | Obligatorio |
 | :--- | :--- | :--- | :--- | :--- |
 | **id_producto** | Número | 0-999999999 | ✅ | ✅ |
 | **id_pedido** | Número | 0-999999999 | ✅ | ✅ |
-| **id_almacen** | Número | 0-50000 | ✅ | ✅ |
 | **FechaEntrega** | Fecha | - | ❌ | ✅ |
-    
-La idea de `Pedido incluir Producto` es que los pedidos pueden incluir distintos productos que son enviados desde distintos almacenes y por tanto llegan en distintas fechas.
+| **DescuentoAplicado** | Número con decimal | 0-100 | ❌ | ✅ |
+| **PrecioFinal** | Número con decimal | 0-99999 | ❌ | ✅ |
+| **Cantidad** | Número | 0-999 |  ❌ | ✅ |
