@@ -172,3 +172,18 @@ Tomando los máximos de las participaciones se generan cardinalidades como `1:1:
 
 ![auditar](/images/tema3/auditar.jpg)
 ![editar](/images/tema3/editar.jpg)
+![ganar](/images/tema3/ganar.jpg)
+
+
+## Construcción del diagrama
+
+Para llegar a diseñar un buen diagrama E/R es necesario ser metodológico y:
+
+- Leer varias veces el problema / enunciado. Hablar con el cliente tantas veces como sea necesario.
+- Buscar **entidades, relaciones y atributos** candidatos.
+    - Identificar las entidades, que suelen ser sustantivos importantes.
+    - Identificar los atributos de cada entidad relevantes para el problema, que suelen ser adjetivos asociados al sustantivo.
+    - Descartar entidades con un solo atributo y reacomodar ese atributo en otra entidad.
+    - Identificar las relaciones, que suelen ser verbos que conectan entidades.
+    - Identificar los atributos de las relaciones.
+    - Descartar relaciones que pueda reacomodar en otra entidad.
