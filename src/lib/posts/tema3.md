@@ -146,4 +146,19 @@ Hemos analizado los elementos del estándar de Peter Chen para diagramas E/R.
 
 A la hora de realizar diagramas E/R existen otras notaciones ya sean estándares en la industria o no.
 
-OTro de los estándares más comúnmente utilizados es `UML` o **Lenguaje Unificado de Modelado**
+Otro de los estándares más comúnmente utilizados es `UML` o **Lenguaje Unificado de Modelado**
+
+
+## Herramientas software para diagramas E/R
+
+Existen multitud de herramientas con las que poder realizar los diagramas en el ordenador:
+
+- DIA
+- LucidChart
+- MySQL Workbench
+- Google Docs
+- Word
+- ERDPlus
+- [draw.io](https://draw.io)
+
+Y por supuesto también se pueden realizar con papel y lápiz.
