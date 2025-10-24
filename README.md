@@ -1,19 +1,3 @@
-
-# Blog Apuntes
-
-Modern SvelteKit blog/notes app with TypeScript, TailwindCSS, mdsvex, modular components, and smooth view transitions.
-
-## Features
-
-- **SvelteKit**: File-based routing, SSR, and view transitions.
-- **TypeScript**: Type safety throughout the codebase.
-- **TailwindCSS**: Custom theme, typography, and accent colors.
-- **mdsvex**: Markdown rendering for posts and notes.
-- **Modular Components**: BlogPost, PostHeader, PostContent, BackToTopButton for maintainable UI.
-- **Dynamic Routing**: Supports `/blog/[slug]` for posts.
-- **View Transitions**: Smooth navigation animations using SvelteKit's API.
-- **ESLint & Prettier**: Code quality and formatting enforced.
-
 ## Getting Started
 
 Install dependencies:
