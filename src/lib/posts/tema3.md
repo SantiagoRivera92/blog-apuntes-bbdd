@@ -162,3 +162,13 @@ Existen multitud de herramientas con las que poder realizar los diagramas en el 
 - [draw.io](https://draw.io)
 
 Y por supuesto también se pueden realizar con papel y lápiz.
+
+
+## Cardinalidades no binarias
+
+Nos preguntamos cuántas ocurrencias aparecerán relacionadas con 1 ocurrencia concreta del resto de entidades.
+
+Tomando los máximos de las participaciones se generan cardinalidades como `1:1:N` en relaciones ternarias.
+
+![auditar](/images/tema3/auditar.jpg)
+![editar](/images/tema3/editar.jpg)
