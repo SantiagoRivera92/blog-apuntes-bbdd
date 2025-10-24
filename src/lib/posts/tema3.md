@@ -84,8 +84,6 @@ Generalmente, deberían usarse **solo** relaciones reflexivas o binarias.
 
 ### Ejemplos de entidades y sus atributos
 
-</br>
-
 **Persona**
 
 | Atributo | Tipo | Dominio | Clave | Obligatorio |
