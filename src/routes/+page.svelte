@@ -21,7 +21,7 @@
 			<p class="text-lg text-muted-foreground">Apuntes de Bases de Datos</p>
 		</header>
 
-		<div class="space-y-8">
+		<div class="grid grid-cols-1 gap-8 md:grid-cols-2">
 			{#each data.posts as post}
 				<article class="group">
 					<BlogPost {post} />

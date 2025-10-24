@@ -4,7 +4,7 @@
 
 <a href={`/blog/${post.slug}`} class="block">
 	<div
-		class="rounded-lg border border-border bg-card p-8 transition-all duration-200 hover:border-accent/50 hover:shadow-lg"
+		class="rounded-lg border border-border bg-card p-8 transition-all duration-200 hover:border-accent/50 hover:shadow-lg h-64 flex flex-col justify-between"
 	>
 		<h2
 			class="mt-3 mb-2 text-2xl font-semibold text-balance text-foreground transition-colors group-hover:text-accent"
