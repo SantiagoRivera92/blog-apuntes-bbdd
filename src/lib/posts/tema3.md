@@ -139,3 +139,11 @@ Generalmente, deberían usarse **solo** relaciones reflexivas o binarias.
 | **DescuentoAplicado** | Número con decimal | 0-100 | ❌ | ✅ |
 | **PrecioFinal** | Número con decimal | 0-99999 | ❌ | ✅ |
 | **Cantidad** | Número | 0-999 |  ❌ | ✅ |
+
+## Otras notaciones
+
+Hemos analizado los elementos del estándar de Peter Chen para diagramas E/R.
+
+A la hora de realizar diagramas E/R existen otras notaciones ya sean estándares en la industria o no.
+
+OTro de los estándares más comúnmente utilizados es `UML` o **Lenguaje Unificado de Modelado**
