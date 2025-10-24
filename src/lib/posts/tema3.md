@@ -179,11 +179,14 @@ Tomando los máximos de las participaciones se generan cardinalidades como `1:1:
 
 Para llegar a diseñar un buen diagrama E/R es necesario ser metodológico y:
 
-- Leer varias veces el problema / enunciado. Hablar con el cliente tantas veces como sea necesario.
-- Buscar **entidades, relaciones y atributos** candidatos.
-    - Identificar las entidades, que suelen ser sustantivos importantes.
-    - Identificar los atributos de cada entidad relevantes para el problema, que suelen ser adjetivos asociados al sustantivo.
+1. Leer varias veces el problema / enunciado. Hablar con el cliente tantas veces como sea necesario.
+2. Buscar **entidades, relaciones y atributos** candidatos.
+    - Identificar las entidades, que suelen ser **sustantivos** importantes.
+    - Identificar los atributos de cada entidad relevantes para el problema, que suelen ser **adjetivos** asociados al sustantivo.
     - Descartar entidades con un solo atributo y reacomodar ese atributo en otra entidad.
-    - Identificar las relaciones, que suelen ser verbos que conectan entidades.
+    - Identificar las relaciones, que suelen ser **verbos** que conectan entidades.
     - Identificar los atributos de las relaciones.
     - Descartar relaciones que pueda reacomodar en otra entidad.
+3. Averiguar **participaciones y cardinalidades** Ante la duda siempre utilizamos las que permitan almacenar la mayor cantidad de datos en la base de datos generando mayor volumen de información.
+4. Buscar incoherencias en el diseño.
+5. **Refinar** el diagrama en nuevas iteraciones, hasta que el diagrama represente el problema fielmente y pueda ser utilizado tanto por el cliente/enunciado como por el informático diseñador de bases de datos.
