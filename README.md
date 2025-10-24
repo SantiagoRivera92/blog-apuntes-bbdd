@@ -29,7 +29,7 @@ npm run preview
 - `src/routes/` — SvelteKit pages and layouts
 - `src/lib/components/` — Modular Svelte components
 - `src/lib/types/` — TypeScript types
-- `.github/copilot-instructions.md` — Project setup checklist
+- `src/lib/posts/` — Posts in Markdown
 
 ## Documentation
 
