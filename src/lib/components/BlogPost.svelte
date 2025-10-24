@@ -1,13 +1,25 @@
+
 <script lang="ts">
-	export let post;
+	import { goto } from '$app/navigation';
+	export let post: {
+		slug: string;
+		title: string;
+		author: string;
+		date: string | Date;
+	};
+
+	function handleClick(event: MouseEvent) {
+		event.preventDefault();
+		goto(`/blog/${post.slug}`, { state: { from: 'index' } });
+	}
 </script>
 
-<a href={`/blog/${post.slug}`} class="block">
+<a href={`/blog/${post.slug}`} class="block group" on:click={handleClick}>
 	<div
-		class="rounded-lg border border-border bg-card p-8 transition-all duration-200 hover:border-accent/50 hover:shadow-lg h-64 flex flex-col justify-between"
+		class="rounded-lg border border-border bg-card p-8 transition-all duration-200 hover:border-interactive/50 hover:shadow-lg h-40 flex flex-col justify-between"
 	>
 		<h2
-			class="mt-3 mb-2 text-2xl font-semibold text-balance text-foreground transition-colors group-hover:text-accent"
+			class=" text-2xl font-semibold text-balance text-foreground transition-colors group-hover:text-interactive"
 			style={`view-transition-name: post-title-${post.slug}`}
 		>
 			{post.title}

@@ -8,8 +8,6 @@ module.exports = {
       colors: {
         background: 'var(--color-background)',
         foreground: 'var(--color-foreground)',
-        card: 'var(--color-card)',
-        'card-foreground': 'var(--color-card-foreground)',
         primary: 'var(--color-primary)',
         'primary-foreground': 'var(--color-primary-foreground)',
         secondary: 'var(--color-secondary)',
@@ -18,16 +16,11 @@ module.exports = {
         'muted-foreground': 'var(--color-muted-foreground)',
         accent: 'var(--color-accent)',
         'accent-foreground': 'var(--color-accent-foreground)',
+        interactive: 'var(--color-interactive)',
+        'interactive-foreground': 'var(--color-interactive-foreground)',
         border: 'var(--color-border)',
         input: 'var(--color-input)',
-        ring: 'var(--color-ring)',
-        // Vibrant accent colors for modern look
-        highlight: '#fbbf24', // yellow
-        info: '#3b82f6', // blue
-        success: '#22c55e', // green
-        danger: '#ef4444', // red
-        pink: '#ec4899',
-        purple: '#a78bfa',
+        ring: 'var(--color-ring)'
       },
       borderRadius: {
         DEFAULT: 'var(--radius)',

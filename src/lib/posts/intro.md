@@ -3,6 +3,8 @@ title: Introducción
 date: 2025-10-19
 author: Santi Rivera
 slug: intro
+categories:
+	- General
 ---
 
 ## Apuntes

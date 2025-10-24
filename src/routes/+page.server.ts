@@ -19,13 +19,22 @@ export const load: PageServerLoad = async () => {
                 title: metadata.title,
                 date: metadata.date,
                 author: metadata.author,
+                categories: Array.isArray(metadata.categories) ? metadata.categories : [],
             };
         })
     );
 
     posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
+    // Collect all unique categories
+    const categorySet = new Set<string>();
+    posts.forEach(post => {
+        post.categories?.forEach(cat => categorySet.add(cat));
+    });
+    const categories = Array.from(categorySet).sort();
+
     return {
         posts,
+        categories,
     };
 };

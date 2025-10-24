@@ -3,6 +3,8 @@ title: Tema 3 - Diseño relacional
 date: 2025-10-22
 author: Santi Rivera
 slug: tema3
+categories:
+    - Bases de Datos
 ---
 
 ## 3.1 Diagramas Entidad / Relación
@@ -52,7 +54,7 @@ Generalmente, deberían usarse **solo** relaciones reflexivas o binarias.
 - Representa el máximo de ocurrencias en relación con una ocurrencia de la entidad seleccionada. Se calcula como el máximo de la participación de cada entidad afectada.
 - Se indica encima o debajo de la relación como `1:1, 1:N o N:M`, indicando el número de ocurrencias relacionadas con el resto de entidades.
 
-#### Tipos de cardinalidad reflexiva y Binarias
+#### Tipos de cardinalidad reflexiva y binarias
 
 - **1:1**
     - Cada una de las ocurrencias de la entidad solo puede relacionarse con una ocurrencia de la entidad relacionada.

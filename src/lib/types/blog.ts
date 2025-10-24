@@ -4,6 +4,7 @@ export type BlogPostMetadata = {
     author: string;
     slug: string;
     description?: string;
+    categories?: string[];
 };
 
 export type BlogPost = {
