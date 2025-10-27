@@ -1,5 +1,5 @@
 ---
-title: Introducción
+title: Horario
 date: 2025-09-01
 author: Santi Rivera
 slug: intro
