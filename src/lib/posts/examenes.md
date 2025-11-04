@@ -28,4 +28,4 @@ categories:
 ## Innovación
 - Lol. Lmao.
 
-!["lol", said the scorpion, "lmao"](/images/intro/lol.jpg)
+![lol, said the scorpion, lmao](/images/intro/lol.jpg)
