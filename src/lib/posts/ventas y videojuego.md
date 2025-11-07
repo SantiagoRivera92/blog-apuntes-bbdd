@@ -1,8 +1,8 @@
 ---
 title: Solución de los ejercicios de Ventas y Videojuego
-date: 2025-11-07
+date: 2025-11-06
 author: Santi Rivera
-slug: concesionario
+slug: ventas
 categories:
 	- Ejercicios
 ---
