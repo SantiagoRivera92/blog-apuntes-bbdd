@@ -1,5 +1,5 @@
 ---
-title: Solución ejercicio concesionario
+title: Solución del ejercicio Concesionario
 date: 2025-11-04
 author: Santi Rivera
 slug: concesionario
