@@ -35,7 +35,7 @@ A mayores, podemos añadir **disparadores o triggers** por programación de base
 
 - Por cada entidad se ccrea una tabla con tantas columnas como atributos tenga la entidad. Las tablas tienen nombres **PLURALES**.
 - Las tablas se representan de este modo:
-    - Productos (<u>Id</u>, Nombre, PrecioActual, Stock, Descripción)
+    - `Productos` (<u>Id</u>, Nombre, PrecioActual, Stock, Descripción)
 
 ##### Clave primaria/principal 
 
@@ -45,9 +45,9 @@ Clave **mínima** elegida por el diseñador. La clave estaráf ormada por los at
 
 Atributo de una entidad que **es clave primaria en otra entidad**. Se representa con una flecha desde la clave foránea hacia la clave primaria.
 
-`Productos` (<u>IdPro</u>, NomPro, PrecioActual, Stock, Descripción)
+- `Productos` (<u>IdPro</u>, NomPro, PrecioActual, Stock, Descripción)
 
-`Ventas` (<u>IdVenta</u>, <u>Producto</u>, PrecioVenta, CantidadVenta)
+- `Ventas` (<u>IdVenta</u>, <u>Producto</u>, PrecioVenta, CantidadVenta)
 
 (En este ejemplo, <u>Producto</u> es clave foránea de la tabla `Productos`. Imagina que hay una flecha uniéndolas)
 
@@ -55,7 +55,7 @@ La clave primaria de `Ventas` es <u>Producto</u> porque representa cada línea e
 
 #### Relación -> Tabla
 
-- Las relaciones de forma general **dan lugar a tablas cuyas columnas serán todos los atributos de la relación y las claves de cada entidad perteneciente**. Su clave estará compuesta por las claves de las entidades relacionadas. El nombre de la nueva tabla será descriptivo y no seguirá la línea del verbo en infinitivo.
+- Las relaciones de forma general **dan lugar a tablas cuyas columnas serán todos los atributos de la relación y las claves de cada entidad perteneciente**. Su clave estará compuesta por las claves de las entidades relacionadas. El nombre de la nueva tabla será descriptivo y no seguirá la línea del verbo en infinitivo. Una tabla que viene de una relación también tiene un nombre **PLURAL**.
 
 - **Excepciones**
     - No se crea una tabla nueva para relaciones con cardinalidad `1:N`. **Se añade la clave de la entidad 1 a la entidad N, y en caso de existir atributos de la relación, también**.
