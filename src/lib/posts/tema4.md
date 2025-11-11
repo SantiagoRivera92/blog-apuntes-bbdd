@@ -37,11 +37,11 @@ A mayores, podemos añadir **disparadores o triggers** por programación de base
 - Las tablas se representan de este modo:
     - Productos (<u>Id</u>, Nombre, PrecioActual, Stock, Descripción)
 
-#### Clave primaria/principal 
+##### Clave primaria/principal 
 
 Clave mínima elegida por el diseñador. La clave estaráf ormada por los atributos clave de la entidad. Se representa <u>subrayada</u>. Pueden ser simples o compuestas. Independientemente de cuántos atributos tenga la clave principal, solo hay una clave principal por cada tabla.
 
-#### Clave foránea 
+##### Clave foránea 
 
 Atributo de una entidad que es clave primaria en otra entidad. Se representa con una flecha desde la clave foránea hacia la clave primaria.
 
@@ -52,3 +52,11 @@ Atributo de una entidad que es clave primaria en otra entidad. Se representa con
 (En este ejemplo, <u>Producto</u> es clave foránea de la tabla `Productos`. Imagina que hay una flecha uniéndolas)
 
 <u>Producto</u> es parte de la clave primaria de `Ventas` porque representa cada línea en un ticket de compra: En el mismo ticket podemos tener varios productos.
+
+#### Relación -> Tabla
+
+- Las relaciones de forma general dan lugar a tablas cuyas columnas serán todos los atributos de la relación y las claves de cada entidad perteneciente. Su clave estará compuesta por las claves de las entidades relacionadas. El nombre de la nueva tabla será descriptivo y no seguirá la línea del verbo en infinitivo.
+
+- **Excepciones**
+    - No se crea una tabla nueva para relaciones con cardinalidad `1:N`. Se añade la clave de la entidad 1 a la entidad N, y en caso de existir atributos de la relación, también.
+    - No se crea una tabla nueva para relaciones con cardinalidad `1:1`. Una u ambas entidades añaden la clave de la otra a sus atributos, haciendo un intercambio de claves foráneas.
