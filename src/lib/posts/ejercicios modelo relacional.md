@@ -1,6 +1,6 @@
 ---
 title: Solución ejercicios modelo relacional
-date: 2025-11-06
+date: 2025-11-11
 author: Santi Rivera
 slug: ejercicios-modelo-relacional
 categories:
