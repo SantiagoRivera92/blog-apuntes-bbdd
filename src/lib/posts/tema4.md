@@ -31,7 +31,7 @@ A mayores, podemos añadir **disparadores o triggers** por programación de base
 
 ### Transformación de un diagrama E/R al modelo relacional
 
-#### Entidad -> Tabla
+#### Entidad ➜ Tabla
 
 - Por cada entidad se ccrea una tabla con tantas columnas como atributos tenga la entidad. Las tablas tienen nombres **PLURALES**.
 - Las tablas se representan de este modo:
@@ -53,10 +53,27 @@ Atributo de una entidad que **es clave primaria en otra entidad**. Se representa
 
 La clave primaria de `Ventas` es <u>Producto</u> porque representa cada línea en un ticket de compra: En el mismo ticket podemos tener varios productos.
 
-#### Relación -> Tabla
+#### Relación ➜ Tabla
 
 - Las relaciones de forma general **dan lugar a tablas cuyas columnas serán todos los atributos de la relación y las claves de cada entidad perteneciente**. Su clave estará compuesta por las claves de las entidades relacionadas. El nombre de la nueva tabla será descriptivo y no seguirá la línea del verbo en infinitivo. Una tabla que viene de una relación también tiene un nombre **PLURAL**.
 
 - **Excepciones**
     - No se crea una tabla nueva para relaciones con cardinalidad `1:N`. **Se añade la clave de la entidad 1 a la entidad N, y en caso de existir atributos de la relación, también**.
     - No se crea una tabla nueva para relaciones con cardinalidad `1:1`. **Una u ambas entidades añaden la clave de la otra a sus atributos, haciendo un intercambio de claves foráneas**.
+
+- Cuando una relación es `ternaria o n-aria`, **siempre** dan lugar a tablas.
+
+#### Atributo de entidad o relación ➜ Columna / Campo / Atributo de la tabla relación correspondiente.
+
+Detallaremos tanto sus restricciones semánticas como si es clave en cada caso.
+
+### Clientes
+
+| Atributo | Clave | Restricciones semánticas |
+| :--- | :--- | :--- |
+|`C1`|PRIMARIA|UNIQUE, 1-1000, NOT NULL|
+|`P1`|SECUNDARIA|UNIQUE, PS1-PS100 (CHECK(PS+1-100)), NOT-NULL|
+
+## Esquema Diagrama Entidad/Relación ➜ Modelo Relacional
+
+![Diagrama Entidad/Relación a Modelo Relacional](/images/tema4/der_to_mr.jpg)
