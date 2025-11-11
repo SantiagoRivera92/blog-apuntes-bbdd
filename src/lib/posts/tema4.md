@@ -39,11 +39,11 @@ A mayores, podemos añadir **disparadores o triggers** por programación de base
 
 ##### Clave primaria/principal 
 
-Clave mínima elegida por el diseñador. La clave estaráf ormada por los atributos clave de la entidad. Se representa <u>subrayada</u>. Pueden ser simples o compuestas. Independientemente de cuántos atributos tenga la clave principal, solo hay una clave principal por cada tabla.
+Clave **mínima** elegida por el diseñador. La clave estaráf ormada por los atributos clave de la entidad. Se representa <u>subrayada</u>. Pueden ser **simples o compuestas**. Independientemente de cuántos atributos tenga la clave principal, **solo hay una clave principal por cada tabla**.
 
 ##### Clave foránea 
 
-Atributo de una entidad que es clave primaria en otra entidad. Se representa con una flecha desde la clave foránea hacia la clave primaria.
+Atributo de una entidad que **es clave primaria en otra entidad**. Se representa con una flecha desde la clave foránea hacia la clave primaria.
 
 `Productos` (<u>IdPro</u>, NomPro, PrecioActual, Stock, Descripción)
 
@@ -55,8 +55,8 @@ Atributo de una entidad que es clave primaria en otra entidad. Se representa con
 
 #### Relación -> Tabla
 
-- Las relaciones de forma general dan lugar a tablas cuyas columnas serán todos los atributos de la relación y las claves de cada entidad perteneciente. Su clave estará compuesta por las claves de las entidades relacionadas. El nombre de la nueva tabla será descriptivo y no seguirá la línea del verbo en infinitivo.
+- Las relaciones de forma general **dan lugar a tablas cuyas columnas serán todos los atributos de la relación y las claves de cada entidad perteneciente**. Su clave estará compuesta por las claves de las entidades relacionadas. El nombre de la nueva tabla será descriptivo y no seguirá la línea del verbo en infinitivo.
 
 - **Excepciones**
-    - No se crea una tabla nueva para relaciones con cardinalidad `1:N`. Se añade la clave de la entidad 1 a la entidad N, y en caso de existir atributos de la relación, también.
-    - No se crea una tabla nueva para relaciones con cardinalidad `1:1`. Una u ambas entidades añaden la clave de la otra a sus atributos, haciendo un intercambio de claves foráneas.
+    - No se crea una tabla nueva para relaciones con cardinalidad `1:N`. **Se añade la clave de la entidad 1 a la entidad N, y en caso de existir atributos de la relación, también**.
+    - No se crea una tabla nueva para relaciones con cardinalidad `1:1`. **Una u ambas entidades añaden la clave de la otra a sus atributos, haciendo un intercambio de claves foráneas**.
