@@ -13,6 +13,6 @@
 	});
 </script>
 
-<div class="mx-auto max-w-4xl px-6">
+<div class="mx-auto max-w-6xl px-6">
 	<slot />
 </div>
