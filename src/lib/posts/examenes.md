@@ -2,7 +2,7 @@
 title: Fechas Exámenes 1ª Evaluación
 date: 2025-11-03
 author: Santi Rivera
-slug: examenes
+slug: examenes-1ed
 categories:
 	- General
 ---
@@ -10,8 +10,8 @@ categories:
 # Exámenes
 
 ## Bases de datos
-- 28 de Noviembre: Examen
-- 2 de Diciembre: Prueba Python 1
+- 28 de Noviembre (19:00-21:30): Examen
+- 2 de Diciembre (17:00-17:30): Prueba Python 1
 
 ## Programación
 - 2 de Diciembre: Examen
