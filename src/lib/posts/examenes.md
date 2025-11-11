@@ -10,20 +10,27 @@ categories:
 # Exámenes
 
 ## Bases de datos
-- 28 de Noviembre (19:00-21:30): Examen
-- 2 de Diciembre (17:00-17:30): Prueba Python 1
-
+- Examen 
+	- **28 de Noviembre**
+	- 19:00 - 21:30
+	- Temas 1, 2, 3 y 4
+- Prueba Python:
+	- **2 de Diciembre**
+	- 17:00 - 17:30
+	- Módulo 1
 ## Programación
-- 2 de Diciembre: Examen
-
+- Examen
+	- **2 de Diciembre**
 ## Sistemas Informáticos
-- 5 de Diciembre: Examen
-
+- Examen
+	- **5 de Diciembre**
 ## Lenguaje de Marcas
-- 1 de Diciembre: Examen
-
+- Examen
+	- **1 de Diciembre**
 ## Entornos de Desarrollo
-- Aún no está puesto
+- Examen
+	- **26 de Noviembre**
+	- Temas 1 y 2
 
 ## Innovación
 - Lol. Lmao.
