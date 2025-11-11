@@ -1,5 +1,5 @@
 ---
-title: Tema 4 - Modelo Relacional
+title: Tema 4 - Modelado Lógico
 date: 2025-11-07
 author: Santi Rivera
 slug: tema4
@@ -7,7 +7,7 @@ categories:
     - Bases de Datos
 ---
 
-# Tema 4 - Modelo Relacional
+# Tema 4 - Modelado Lógico
 
 ## Modelo Relacional
 
