@@ -51,7 +51,7 @@ Atributo de una entidad que **es clave primaria en otra entidad**. Se representa
 
 (En este ejemplo, <u>Producto</u> es clave foránea de la tabla `Productos`. Imagina que hay una flecha uniéndolas)
 
-<u>Producto</u> es parte de la clave primaria de `Ventas` porque representa cada línea en un ticket de compra: En el mismo ticket podemos tener varios productos.
+La clave primaria de `Ventas` es <u>Producto</u> porque representa cada línea en un ticket de compra: En el mismo ticket podemos tener varios productos.
 
 #### Relación -> Tabla
 
