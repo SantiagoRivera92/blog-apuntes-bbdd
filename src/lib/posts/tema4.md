@@ -76,4 +76,4 @@ Detallaremos tanto sus restricciones semánticas como si es clave en cada caso.
 
 ## Esquema Diagrama Entidad/Relación ➜ Modelo Relacional
 
-![Diagrama Entidad/Relación a Modelo Relacional](/images/tema4/der_to_mr.jpg)
+![Diagrama Entidad/Relación a Modelo Relacional](/images/tema4/der_to_mr.png)
