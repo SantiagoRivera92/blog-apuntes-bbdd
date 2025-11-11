@@ -16,7 +16,7 @@
 </svelte:head>
 
 <div class="min-h-screen bg-background">
-	<div class="mx-auto max-w-4xl px-6 py-16">
+	<div class="mx-auto max-w-6xl px-6 py-16">
 		<header class="mb-8">
 			<h1 class="mb-3 text-5xl font-bold tracking-tight text-foreground">Blog DAW</h1>
 			<p class="text-lg text-muted-foreground">Apuntes de DAW</p>

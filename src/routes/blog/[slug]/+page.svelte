@@ -36,7 +36,7 @@
 </svelte:head>
 
 <div class="min-h-screen bg-background">
-	<div class="mx-auto max-w-4xl px-6 py-12">
+	<div class="mx-auto max-w-6xl px-6 py-12">
 		<a
 			href={backHref}
 			class="group mb-8 inline-flex items-center gap-2 font-medium text-interactive transition-colors hover:text-interactive/80"
