@@ -14,3 +14,7 @@ categories:
 ## Transportes
 
 ![Transportes](/images/ejercicios/transportes.jpg)
+
+## Instituto
+
+![Instituto](/images/ejercicios/instituto.jpg)
