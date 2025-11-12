@@ -170,7 +170,7 @@ categories:
 
 ## Mantenimiento
 
-### Última fase del ciclo de vida. Arreglamos problemas que vayan surgiendo en la aplicación con el uso. En algunas ocasiones, es necesario empezar el ciclo de vida desde cero.
+#### Última fase del ciclo de vida. Arreglamos problemas que vayan surgiendo en la aplicación con el uso. En algunas ocasiones, es necesario empezar el ciclo de vida desde cero.
 
 - Mantenimiento correctivo:
     - Solucionar errores que no detectamos en las pruebas anteriores.

@@ -10,3 +10,7 @@ categories:
 ## Empresa
 
 ![Empresa](/images/ejercicios/empresa.jpg)
+
+## Transportes
+
+![Transportes](/images/ejercicios/transportes.jpg)
