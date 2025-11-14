@@ -12,7 +12,7 @@ categories:
 ![Empresa](/images/ejercicios/empresa.jpg)
 
 - `Clientes` (<u>id</u> **(1)**, nombre, apellido, dirección, fecha_n)
-- `Compras` (<u>id_compra</u>, id_cliente **(1)**, id_producto **(2)**, cantidad, precio)
+- `Compras` (<u>id_compra</u>, <u>id_cliente</u> **(1)**, <u>id_producto</u> **(2)**, cantidad, precio)
 - `Productos` (<u>id</u> **(2)**, nombre, apellido, id_proveedor **(3)**)
 - `Proveedores` (<u>id</u> **(3)**, nombre, dirección)
 
