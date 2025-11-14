@@ -13,7 +13,7 @@ categories:
 
 - `Clientes` (<u>id</u> **(1)**, nombre, apellido, dirección, fecha_n)
 - `Compras` (<u>fecha</u>, <u>id_cliente</u> **(1)**, <u>id_producto</u> **(2)**, cantidad, precio)
-- `Productos` (<u>id</u> **(2)**, nombre, apellido, id_proveedor **(3)**)
+- `Productos` (<u>id</u> **(2)**, nombre, precio, id_proveedor **(3)**)
 - `Proveedores` (<u>id</u> **(3)**, nombre, dirección)
 
 ## Transportes
