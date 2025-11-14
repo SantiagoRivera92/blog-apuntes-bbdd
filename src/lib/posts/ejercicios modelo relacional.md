@@ -21,10 +21,10 @@ categories:
 ![Transportes](/images/ejercicios/transportes.jpg)
 
 - `Camioneros` (<u>id</u> **(1)**, nombre, teléfono, dirección, salario, población)
-- `Paquetes` (<u>id</u> **(2)**, id_camionero **(1)**, id_provincia **(3)**, dirección, destinatario, descripción)
+- `Paquetes` (<u>id_paquete</u> **(2)**, id_camionero **(1)**, id_provincia **(3)**, dirección, destinatario, descripción)
 - `Provincias` (<u>id</u> **(3)**, nombre)
 - `Camiones` (<u>matricula</u> **(4)**, modelo, tipo, potencia)
-- `Turnos` (<u>id_camionero</u> **(1)**, <u>matricula</u> **(4)**, fecha)
+- `Turnos` (<u>id_camionero</u> **(1)**, <u>matricula</u> **(4)**, <u>fecha</u>)
 
 ## Instituto
 
@@ -33,4 +33,4 @@ categories:
 - `Profesores` (<u>id</u> **(1)**, nombre, dirección, teléfono)
 - `Módulos` (<u>código</u> **(2)**, <u>id_profesor</u> **(1)**, nombre)
 - `Alumnos` (<u>id</u> **(3)**, nombre, apellido, fecha_nacimiento, id_delegado **(3)**)
-- `Cursos` (<u>id_alumno</u> **(3)**, <u>código_modulo</u> **(2)**)
+- `Matrículas` (<u>id_alumno</u> **(3)**, <u>código_modulo</u> **(2)**)
