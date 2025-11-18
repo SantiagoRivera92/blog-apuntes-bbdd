@@ -49,7 +49,7 @@ categories:
 - `Jugadores`(<u>código</u> (1), nombre, posición, fecha_nac, código_equipo (3))
 - `Goles` (<u>código</u>, código_jugador (1), código_partido (2), minuto, desc)
 - `Partidos`(<u>código</u> (2), goles_fuera, goles_casa, fecha)
-- `Participaciones` (<u>código_partido<U> (2), <u>código_equipo<u> (3))
+- `Participaciones` (<u>código_partido<U> (2), <u>código_equipo</u> (3))
 - `Equipos` (<u>código</u> (3), año, aforo, estadio, ciudad, nombre, dni_presidente (4))
 - `Presidentes` (<u>dni</u>, nombre, apellido, año, fecha_nacimiento)
 
@@ -58,7 +58,7 @@ categories:
 - `Hoteles` (<u>nombre</u> (1), código_categoría (2), dirección, teléfono, año)
 - `Categorías` (<u>código</u> (2), descripción, iva)
 - `Habitaciones` (<u>código<u> (3), nombre_hotel (1), tipo)
-- `ReservasDeAgencias` (<u>código_habitación<u> (3), <u>código_agencia</u> (4), <u>fecha_inicio</u>, fecha_fin)
+- `ReservasDeAgencias` (<u>código_habitación</u> (3), <u>código_agencia</u> (4), <u>fecha_inicio</u>, fecha_fin)
 - `Agencias` (<u>código</u> (4), nombre, teléfono, nombre_persona, dirección)
 - `ReservasDeParticulares` (<u>código_habitación</u> (3), <u>código_persona</u> (5), <u>fecha_inicio</u>, fecha_fin)
 - `Particulares` (<u>código</u> (5), nombre, dirección, teléfono)
