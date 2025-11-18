@@ -41,7 +41,7 @@ categories:
 - `Autorías` (<u>código_autor</u> (1), <u>código libro</u> (2))
 - `Libros` (<u>código</u> (2), nombre, ISBN, editorial, páginas)
 - `Ejemplares` (<u>código</u> (3), localización, código_libro (3))
-- `Préstamos` (<u>código_ejemplar<u> (3), <u>código_usuario</u> (4), <u>fecha_préstamo</u>, fecha_devolución)
+- `Préstamos` (<u>código_ejemplar</u> (3), <u>código_usuario</u> (4), <u>fecha_préstamo</u>, fecha_devolución)
 - `Usuarios` (<u>código</u>, nombre, teléfono, dirección)
 
 ### Ejemplos
