@@ -7,9 +7,7 @@ categories:
     - Bases de Datos
 ---
 
-# Tema 4 - Modelado Lógico
-
-## Modelo Relacional
+## 4.1 - Modelo Relacional
 
 ### Características:
 
@@ -77,3 +75,31 @@ Detallaremos tanto sus restricciones semánticas como si es clave en cada caso.
 ## Esquema Diagrama Entidad/Relación ➜ Modelo Relacional
 
 ![Diagrama Entidad/Relación a Modelo Relacional](/images/tema4/der_to_mr.png)
+
+## 4.2 - Normalización
+
+El criterio de medición de la calidad utilizado con las bases de datos relacionales son las **formas normales**. Las formas normales son **restricciones** aplicadas sobre el conjunto de atributos de un diseño. El proceso de aplicar dichas restricciones se denomina normalización. **La normalización nos muestra qué es incorrecto y cómo corregirlo**.
+### Objetivos de la normalización
+
+-   `Evitar la redundancia excesiva en la base de datos`
+-   `Evitar anomalías de inserción, modificación o borrado`
+-   `Exigir / Mantener la separación y organización de datos`
+
+Existen **6 formas normales** y **toda forma normal cumple las anteriores**.
+
+### Conceptos
+
+- **Dependencia funcional/implicación:** un atributo depende funcionalmente de otro si por cada valor del mismo obtenemos en todo momento un único valor del primero. Se representa como `X ➜ Y`. Dicho de otro modo, a través de X se obtiene Y, un valor de X implica un valor de Y (Y depende de X).
+    - <u>CodArtículo</u> ➜ Descripción
+    - <u>CodArtículo</u> ➜ Precio
+
+`Esto generalmente aplica a tablas con claves primarias con solo un atributo`
+
+- **Dependencia funcional completa:** si X es un conjunto de atributos, se dice que Y tiene dependencia funcional completa de X si depende funcionalmente del conjunto al completo y no de ningún subconjunto del mismo.
+    - <u>NumPedido</u>+<u>CodArtículo</u> ➜ Cantidad (SÍ)
+    - <u>NumPedido</u> ➜ Cantidad (NO)
+    - <u>CodArtículo</u> ➜ Cantidad (NO)
+
+`Esto aplica a tablas con claves primarias compuestas`
+
+- **Dependencia funcional transitiva:** si X➜Y, Y➜Z, entonces X➜Z.

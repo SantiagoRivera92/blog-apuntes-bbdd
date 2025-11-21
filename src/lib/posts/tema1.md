@@ -6,6 +6,7 @@ slug: tema1
 categories:
     - Bases de Datos
 ---
+
 ## 1.1 - Ficheros
 
 **Definición:** Estructura de datos organizada, almacenada en un dispositivo de almacenamiento. Se caracterizan por su tipo y extensión, que determina su formato. Son creados y gestionados por el S.O.
