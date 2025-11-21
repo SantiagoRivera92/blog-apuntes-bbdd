@@ -22,3 +22,12 @@ La normalización optimiza las tablas en los sistemas de gestión de bases de da
 ### Desnormalización
 
 La **desnormalización** es el proceso de procurar optimizar el funcionamiento de una base de datos por medio de agregar datos redundantes.​ A veces es necesario porque los actuales sistemas de gestión de bases de datos (SGBD) implementan el modelo relacional de manera limitada. **Un SGBD relacional que cumpla las recomendaciones ISO debe permitir una base de datos completamente normalizada a nivel lógico**, soportado por un almacenamiento físico de los datos afinado para los requisitos necesarios del sistema.
+
+
+## Alcanzar nivel de la Tercera Forma Normal para este MR
+
+`Pedidos` (<u>NumPedido</u>, FechaPedido, NumProv, NomProv, DirProv, NumProd, DescProd, PrecioU, Cantidad, Importe, Total)
+
+- `Pedidos` (<u>NumPedido</u>, <u>NumProd</u> (1), <u>FechaPedido</u>, PrecioU, Cantidad)
+- `Productos`(<u>NumProd</u> (1), DescProd, PrecioU, NumProv (2))
+- `Proveedores`(<u>NumProv</u> (2), DirProv, NomProv)

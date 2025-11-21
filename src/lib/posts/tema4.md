@@ -93,20 +93,20 @@ Existen **6 formas normales** y **toda forma normal cumple las anteriores**.
     - <u>CodArtículo</u> ➜ Descripción
     - <u>CodArtículo</u> ➜ Precio
 
-`Esto generalmente aplica a tablas con claves primarias con solo un atributo`
+    `Esto generalmente aplica a tablas con claves primarias con solo un atributo`
 
 - **Dependencia funcional completa:** si X es un conjunto de atributos, se dice que Y tiene dependencia funcional completa de X si depende funcionalmente del conjunto al completo y no de ningún subconjunto del mismo.
     - <u>NumPedido</u> + <u>CodArtículo</u> ➜ Cantidad (<span style="color:green">SÍ ✅</span>)
     - <u>NumPedido</u> ➜ Cantidad (<span style="color:red">NO ❌</span>)
     - <u>CodArtículo</u> ➜ Cantidad (<span style="color:red">NO ❌</span>)
 
-`Esto aplica a tablas con claves primarias compuestas`
+    `Esto aplica a tablas con claves primarias compuestas`
 
 - **Dependencia funcional transitiva:** si `X➜Y` y `Y➜Z`, entonces `X - - - > Z` (X➜Y➜Z).
 
 ### Formas normales
 
-- **Primera forma normal:** para todo registro/fila/tupla cada atributo/campo/columna sólo puede tomar un valor, quedando prohibido que puedan tomar, derivar o componerse de varios valores a la vez. Modificamos atributos no atómicos.
+- **Primera forma normal:** para todo registro/fila/tupla cada atributo/campo/columna sólo puede tomar un valor, quedando prohibido que puedan tomar, derivar, componerse o calcularse de varios valores a la vez. Modificamos atributos no atómicos.
     - `Teléfonos`
     - `Productos`
     - `Dirección`
