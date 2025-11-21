@@ -89,17 +89,18 @@ Existen **6 formas normales** y **toda forma normal cumple las anteriores**.
 
 ### Conceptos
 
-- **Dependencia funcional/implicación:** un atributo depende funcionalmente de otro si por cada valor del mismo obtenemos en todo momento un único valor del primero. Se representa como `X ➜ Y`. Dicho de otro modo, a través de X se obtiene Y, un valor de X implica un valor de Y (Y depende de X).
+- **Dependencia funcional / implicación:** un atributo depende funcionalmente de otro si por cada valor del mismo obtenemos en todo momento un único valor del primero. Se representa como `X ➜ Y`. Dicho de otro modo, a través de X se obtiene Y, un valor de X implica un valor de Y (Y depende de X).
     - <u>CodArtículo</u> ➜ Descripción
     - <u>CodArtículo</u> ➜ Precio
 
 `Esto generalmente aplica a tablas con claves primarias con solo un atributo`
 
 - **Dependencia funcional completa:** si X es un conjunto de atributos, se dice que Y tiene dependencia funcional completa de X si depende funcionalmente del conjunto al completo y no de ningún subconjunto del mismo.
-    - <u>NumPedido</u>+<u>CodArtículo</u> ➜ Cantidad (SÍ)
-    - <u>NumPedido</u> ➜ Cantidad (NO)
-    - <u>CodArtículo</u> ➜ Cantidad (NO)
+    - <u>NumPedido</u> + <u>CodArtículo</u> ➜ Cantidad (<span style="color:green">SÍ</span>)
+    - <u>NumPedido</u> ➜ Cantidad (<span style="color:red">NO</span>)
+    - <u>CodArtículo</u> ➜ Cantidad (<span style="color:red">NO</span>)
 
 `Esto aplica a tablas con claves primarias compuestas`
 
-- **Dependencia funcional transitiva:** si X➜Y, Y➜Z, entonces X➜Z.
+- **Dependencia funcional transitiva:** si `X➜Y` y `Y➜Z`, entonces `X - - - > Z` (X➜Y➜Z).
+
