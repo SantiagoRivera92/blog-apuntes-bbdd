@@ -96,9 +96,9 @@ Existen **6 formas normales** y **toda forma normal cumple las anteriores**.
 `Esto generalmente aplica a tablas con claves primarias con solo un atributo`
 
 - **Dependencia funcional completa:** si X es un conjunto de atributos, se dice que Y tiene dependencia funcional completa de X si depende funcionalmente del conjunto al completo y no de ningún subconjunto del mismo.
-    - <u>NumPedido</u> + <u>CodArtículo</u> ➜ Cantidad (<span style="color:green">SÍ</span>)
-    - <u>NumPedido</u> ➜ Cantidad (<span style="color:red">NO</span>)
-    - <u>CodArtículo</u> ➜ Cantidad (<span style="color:red">NO</span>)
+    - <u>NumPedido</u> + <u>CodArtículo</u> ➜ Cantidad (<span style="color:green">SÍ ✅</span>)
+    - <u>NumPedido</u> ➜ Cantidad (<span style="color:red">NO ❌</span>)
+    - <u>CodArtículo</u> ➜ Cantidad (<span style="color:red">NO ❌</span>)
 
 `Esto aplica a tablas con claves primarias compuestas`
 
