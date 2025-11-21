@@ -104,3 +104,14 @@ Existen **6 formas normales** y **toda forma normal cumple las anteriores**.
 
 - **Dependencia funcional transitiva:** si `X➜Y` y `Y➜Z`, entonces `X - - - > Z` (X➜Y➜Z).
 
+### Formas normales
+
+- **Primera forma normal:** para todo registro/fila/tupla cada atributo/campo/columna sólo puede tomar un valor, quedando prohibido que puedan tomar, derivar o componerse de varios valores a la vez. Modificamos atributos no atómicos.
+    - `Teléfonos`
+    - `Productos`
+    - `Dirección`
+
+- **Segunda forma normal:** 1ªFN y además, cada atributo que no forma parte de la clave tiene que tener dependencia funcional completa de la misma. Modificamos / Reubicamos los atributos que tienen dependencia parcial.
+    - <u>NumPedido</u> + <u>CodArtículo</u> ➜ Total
+
+- **Tercera forma normal:** 2ªFN y además, ningún atributo que no forma parte de la clave tiene dependencia funcional transitiva de la clave principal.
