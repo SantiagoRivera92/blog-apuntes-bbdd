@@ -80,7 +80,7 @@ categories:
 - `Productos`(<u>id_producto</u>, categoría_producto, desc_prod, precio_unitario)
 ### 3FN
 
-- `Facturas` (<u>id_factura</u> (2), fecha, id_cliente (1))
-- `LíneasFacturas` (<u>id_factura</u> (2), <u>id_producto</u> (3), precio_unitario, cantidad)
+- `Facturas` (<u>id_factura</u> (2), fecha, cedula (1))
+- `LíneasFacturas` (<u>id_factura</u> (2), <u>id_producto</u> (3), cantidad)
 - `Productos` (<u>id_producto</u> (3), categoria, desc_prod, precio_unitario)
-- `Clientes` (<u>id_cliente</u> (1), nombre, dirección, cedula, ciudad, teléfono)
+- `Clientes` (<u>cedula</u> (1), nombre, dirección , ciudad, teléfono)
