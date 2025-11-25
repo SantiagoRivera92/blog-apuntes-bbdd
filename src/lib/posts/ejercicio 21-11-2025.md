@@ -9,11 +9,40 @@ categories:
 
 ## Ejercicio 1
 
-- `Matriculas` (<u>DNI</u> (1), Nombre, Apellidos)
+### 1FN
+
+- `Matrículas` (<u>DNI</u>, Nombre, Apellido1, Apellido2)
+- `Asignaturas` (<u>Cod_asignatura</u>, Nota, Curso, Aula, Lugar)
+
+### 2FN
+
+- `Matriculas` (<u>DNI</u> (1), Nombre, Apellido1, Apellido2)
 - `NotasAsignaturas` (<u>DNI</u> (1), <u>Cod_asignatura</u> (2), Nota)
 - `Asignaturas` (<u>Cod_asignatura</u> (2), Curso, Aula, Lugar)
 
+### 3FN
+
+- `Matriculas` (<u>DNI</u> (1), Nombre, Apellido1, Apellido2)
+- `NotasAsignaturas` (<u>DNI</u> (1), <u>Cod_asignatura</u> (2), Nota)
+- `Asignaturas` (<u>Cod_asignatura</u> (2), Curso, Aula (3))
+- `Aulas` (<u>Aula</u> (3), Lugar)
+
 ## Ejercicio 2
+
+
+### 1FN
+
+- `Empleados`: (<u>NumEmp</u>, NSS, Seccion, NumJefeSec, NumCurso)
+- `Cursos`: (<u>NumCurso</u>, Tema)
+- `Matrículas` (<u>NumEmp</u> (1), <u>NumCurso</u> (2))
+
+### 2FN
+
+- `Empleados`: (<u>NumEmp</u>, NSS, Seccion, NumJefeSec, NumCurso)
+- `Cursos`: (<u>NumCurso</u>, Tema)
+- `Matrículas` (<u>NumEmp</u> (1), <u>NumCurso</u> (2))
+
+### 3FN
 
 - `Empleados` (<u>NumEmp</u> (1), NSS, Seccion (2))
 - `Secciones` (<u>Seccion</u> (2), NumJefeSeccion (1))

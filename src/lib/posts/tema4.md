@@ -115,3 +115,16 @@ Existen **6 formas normales** y **toda forma normal cumple las anteriores**.
     - <u>NumPedido</u> + <u>CodArtículo</u> ➜ Total
 
 - **Tercera forma normal:** 2ªFN y además, ningún atributo que no forma parte de la clave tiene dependencia funcional transitiva de la clave principal.
+
+### Índices
+
+El orden de las filas y columnas **no tiene importancia** y no lo tenemos en cuenta para nada.
+
+En todas las tablas y relaciones existirá como mínimo un índice, que es la clave primaria, y añadimos otros a mayores para realizar ordenación, acelerar las consultas y trabajar con claves ajenas.
+
+### Inconvenientes principales del uso de índices:
+
+-   `Aumentan la redundancia`
+-   `Ralentizan el sistema de inserción, actualización y borrado`
+
+No es conveniente abusar del número de índices.
