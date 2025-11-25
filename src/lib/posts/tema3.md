@@ -1,5 +1,5 @@
 ---
-title: Tema 3 - Diseño relacional
+title: Bases de Datos - Tema 3 - Diseño relacional
 date: 2025-10-22
 author: Santi Rivera
 slug: tema3

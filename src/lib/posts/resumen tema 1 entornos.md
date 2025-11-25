@@ -1,5 +1,5 @@
 ---
-title: Tema 1 - Entornos de Desarrollo
+title: Entornos - Tema 1 - Entornos de Desarrollo
 date: 2025-10-11
 author: Santi Rivera
 slug: entornos-tema1

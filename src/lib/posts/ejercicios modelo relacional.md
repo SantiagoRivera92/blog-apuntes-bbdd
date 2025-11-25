@@ -1,5 +1,5 @@
 ---
-title: Solución ejercicios modelo relacional
+title: Ejercicios - Bases de Datos - Modelo Relacional
 date: 2025-11-11
 author: Santi Rivera
 slug: ejercicios-modelo-relacional

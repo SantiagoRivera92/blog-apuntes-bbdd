@@ -1,5 +1,5 @@
 ---
-title: Ejercicios normalización
+title: Ejercicios - Bases de Datos - Ejercicios normalización
 date: 2025-11-14
 author: Santi Rivera
 slug: ejercicios-normalizacion
