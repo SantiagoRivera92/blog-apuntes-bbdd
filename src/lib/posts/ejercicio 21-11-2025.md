@@ -32,8 +32,7 @@ categories:
 ### 1FN
 
 - `Empleados`: (<u>NumEmp</u>, NSS, Seccion, NumJefeSec)
-- `Cursos`: (<u>NumCurso</u>, Tema)
-- `Matrículas` (<u>NumEmp</u> (1), <u>NumCurso</u> (2))
+- `Matrículas` (<u>NumEmp</u> (1), <u>NumCurso</u> (2), Tema)
 
 ### 2FN
 
