@@ -69,7 +69,18 @@ categories:
 
 ## Ejercicio 4
 
-- `Factura` (<u>id_factura</u> (2), fecha, id_cliente (1))
+### 1FN
+
+- `Facturas` (<u>id_factura</u>, fecha, nombre_cliente, dirección_cliente, cedula_cliente, ciudad_cliente, telefono_cliente)
+- `LíneasFacturas`(<u>id_producto</u>, <u>id_factura</u>, categoría_producto, desc_prod, precio_unitario, cantidad)
+### 2FN
+
+- `Facturas` (<u>id_factura</u>, fecha, nombre_cliente, dirección_cliente, cedula_cliente, ciudad_cliente, telefono_cliente)
+- `LíneasFacturas` (<u>id_factura</u>, <u>id_producto</u>, cantidad)
+- `Productos`(<u>id_producto</u>, categoría_producto, desc_prod, precio_unitario)
+### 3FN
+
+- `Facturas` (<u>id_factura</u> (2), fecha, id_cliente (1))
 - `LíneasFacturas` (<u>id_factura</u> (2), <u>id_producto</u> (3), precio_unitario, cantidad)
-- `Producto` (<u>id_producto</u> (3), categoria, desc_prod, precio_unitario)
-- `Clientes` (<u>id_cliente</u> (1), nombre, dirección, NIT, ciudad, teléfono)
+- `Productos` (<u>id_producto</u> (3), categoria, desc_prod, precio_unitario)
+- `Clientes` (<u>id_cliente</u> (1), nombre, dirección, cedula, ciudad, teléfono)
