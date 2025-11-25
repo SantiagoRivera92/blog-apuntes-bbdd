@@ -29,16 +29,15 @@ categories:
 
 ## Ejercicio 2
 
-
 ### 1FN
 
-- `Empleados`: (<u>NumEmp</u>, NSS, Seccion, NumJefeSec, NumCurso)
+- `Empleados`: (<u>NumEmp</u>, NSS, Seccion, NumJefeSec)
 - `Cursos`: (<u>NumCurso</u>, Tema)
 - `Matrículas` (<u>NumEmp</u> (1), <u>NumCurso</u> (2))
 
 ### 2FN
 
-- `Empleados`: (<u>NumEmp</u>, NSS, Seccion, NumJefeSec, NumCurso)
+- `Empleados`: (<u>NumEmp</u>, NSS, Seccion, NumJefeSec)
 - `Cursos`: (<u>NumCurso</u>, Tema)
 - `Matrículas` (<u>NumEmp</u> (1), <u>NumCurso</u> (2))
 
