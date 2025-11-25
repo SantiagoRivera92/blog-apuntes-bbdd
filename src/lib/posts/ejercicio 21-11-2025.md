@@ -73,6 +73,7 @@ categories:
 
 - `Facturas` (<u>id_factura</u>, fecha, nombre_cliente, dirección_cliente, cedula_cliente, ciudad_cliente, telefono_cliente)
 - `LíneasFacturas`(<u>id_producto</u>, <u>id_factura</u>, categoría_producto, desc_prod, precio_unitario, cantidad)
+
 ### 2FN
 
 - `Facturas` (<u>id_factura</u>, fecha, nombre_cliente, dirección_cliente, cedula_cliente, ciudad_cliente, telefono_cliente)
@@ -83,4 +84,4 @@ categories:
 - `Facturas` (<u>id_factura</u> (2), fecha, cedula (1))
 - `LíneasFacturas` (<u>id_factura</u> (2), <u>id_producto</u> (3), cantidad)
 - `Productos` (<u>id_producto</u> (3), categoria, desc_prod, precio_unitario)
-- `Clientes` (<u>cedula</u> (1), nombre, dirección , ciudad, teléfono)
+- `Clientes` (<u>cedula</u> (1), nombre, dirección, ciudad, teléfono)
