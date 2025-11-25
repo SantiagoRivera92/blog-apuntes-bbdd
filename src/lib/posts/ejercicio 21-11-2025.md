@@ -49,8 +49,21 @@ categories:
 
 ## Ejercicio 3
 
+### 1FN
+
+- `Facturas` (<u>id_orden</u>, id_cliente, fecha, nombre_cli, ciudad)
+- `LíneasFacturas` (<u>id_orden</u>, <u>id_art</u>, nom_art, cant, precio)
+
+### 2FN
+
+- `Facturas` (<u>id_orden</u>, id_cliente, fecha, nombre_cli, ciudad)
+- `LíneasFacturas` (<u>id_orden</u>, <u>id_art</u>, cant)
+- `Artículos` (<u>id_art</u>, nom_art, precioU)
+
+### 3FN
+
 - `Facturas` (<u>Id_orden</u> (1), id_cliente (3), fecha)
-- `LíneasFacturas` (<u>Id_orden</u> (1), <u>id_art</u> (2), cantidad, precio)
+- `LíneasFacturas` (<u>Id_orden</u> (1), <u>id_art</u> (2), cantidad)
 - `Clientes` (<u>id_cliente</u> (3), nombre, ciudad)
 - `Artículos` (<u>id_art</u> (2), nom_art, precio)
 
