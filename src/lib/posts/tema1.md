@@ -1,5 +1,5 @@
 ---
-title: Tema 1 - Almacenamiento de datos
+title: Bases de Datos - Tema 1 - Almacenamiento de datos
 date: 2025-10-20
 author: Santi Rivera
 slug: tema1

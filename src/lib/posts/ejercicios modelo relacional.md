@@ -1,5 +1,5 @@
 ---
-title: Solución ejercicios modelo relacional
+title: Ejercicios - Bases de Datos - Modelo Relacional
 date: 2025-11-11
 author: Santi Rivera
 slug: ejercicios-modelo-relacional
@@ -19,6 +19,43 @@ categories:
 ## Transportes
 
 ![Transportes](/images/ejercicios/transportes.jpg)
+
+
+### Camionero
+
+| Nombre del atributo | Restricciones  | Dominio |
+| :--- | :--- | :--- |
+| id | `PRIMARY KEY` | Entero (0-999999) |
+| población | `NOT NULL` | Cadena (50 caracteres) |
+| salario | `NOT NULL` | Decimal (0 - 100000) |
+| dirección | `NOT NULL` | Cadena (80 caracteres) |
+| telefono | `NOT NULL` | Cadena (9 caracteres) |
+| nombre | `NOT NULL` | Cadena (50 caracteres) |
+
+### Camión
+
+| Nombre del atributo | Restricciones  | Dominio |
+| :--- | :--- | :--- |
+| matrícula | `PRIMARY KEY` | Cadena (8 caracteres) |
+| modelo | `NOT NULL` | Cadena (50 caracteres) |
+| tipo | `NOT NULL` | Cadena (50 caracteres) |
+| potencia | `NOT NULL` | Entero (0-800) |
+
+### Paquete
+
+| Nombre del atributo | Restricciones  | Dominio |
+| :--- | :--- | :--- |
+| id | `PRIMARY KEY` | Entero (0-99999999) |
+| destinatario | `NOT NULL` | Cadena (50 caracteres) |
+| descripción | ❌ | Cadena (50 caracteres) |
+| dirección | `NOT NULL` | Cadena (50 caracteres) |
+
+### Provincia
+
+| Nombre del atributo | Restricciones  | Dominio |
+| :--- | :--- | :--- |
+| id | `PRIMARY KEY` | Entero (0-100) |
+| nombre | `NOT NULL` | Cadena (50 caracteres) |
 
 - `Camioneros` (<u>id</u> **(1)**, nombre, teléfono, dirección, salario, población)
 - `Paquetes` (<u>id_paquete</u> **(2)**, id_camionero **(1)**, id_provincia **(3)**, dirección, destinatario, descripción)
