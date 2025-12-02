@@ -8,13 +8,6 @@ categories:
 ---
 
 ## Ejercicio 1
-
-
-```python
-def holaMundo():
-	print("Hola Mundo")
-```
-
 ### 1FN
 
 - `Matrículas` (<u>DNI</u>, Nombre, Apellido1, Apellido2)
