@@ -122,9 +122,34 @@ El orden de las filas y columnas **no tiene importancia** y no lo tenemos en cue
 
 En todas las tablas y relaciones existirá como mínimo un índice, que es la clave primaria, y añadimos otros a mayores para realizar ordenación, acelerar las consultas y trabajar con claves ajenas.
 
-### Inconvenientes principales del uso de índices:
+#### Inconvenientes principales del uso de índices:
 
 -   `Aumentan la redundancia`
 -   `Ralentizan el sistema de inserción, actualización y borrado`
 
 No es conveniente abusar del número de índices.
+
+
+### Diagrama E/R extendido
+
+#### Atributos
+
+-   `Obligatorios` (Elipse DER) / opcionales (línea discontinua al final)
+-   `Compuestos`. Se pueden descomponer en atributos atómicos, lo representamos como doble elipse. Si tiene doble elipse y no se divide es que puede tomar varios valores (suele ir en plural). (EJ. Teléfonos)
+-   `Univaluados / multivaluados`. Un valor o varios.
+-   `Derivados (calculados)`. Representación línea discontinua en la elipse. No se incorpora a las tablas.
+ 
+#### Generalizacion / Especializacion
+
+Una entidad genérica se puede subespecializar en subentidades especializadas, de manera que cada subentidad hereda todos los atributos de la superentidad y puede añadir los suyos propios.
+
+Esta jerarquía se representa con un triángulo isósceles invertido apuntando a las subclases.
+
+La relación puede tener atributos, en caso de tenerlos, ese atributo determina a que subentidad pertenece la ocurrencia.
+
+El mismo dibujo se puede leer de arriba a abajo y se llama **especialización** o de abajo a arriba y se llama **generalización** (no se tiene en cuenta el atributo cuando se lee)
+
+-   `Exclusiva`. Cada ocurrencia de la superclase se traduce en un único tipo de las subclases. Lo indicamos con un arco debajo del triángulo.
+-   `Inclusiva`. Cada ocurrencia de la superclase se traduce en uno o varios tipos de las subclases. No lleva arco. Permite varias opciones.
+-   `Total`. Cuando sea total, cada ocurrencia de la superclase se va a traducir obligatoriamente en una subclase. Lo indicaré poniendo un círculo encima del triángulo. No se puede guardar nada en la superclase.
+-   `Parcial`. Cada ocurrencia de la superclase puede materializarse o no en una subclase. Es opcional, por lo tanto, no se pone el circulo.
