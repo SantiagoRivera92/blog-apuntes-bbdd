@@ -153,3 +153,11 @@ El mismo dibujo se puede leer de arriba a abajo y se llama **especialización** 
 -   `Inclusiva`. Cada ocurrencia de la superclase se traduce en uno o varios tipos de las subclases. No lleva arco. Permite varias opciones.
 -   `Total`. Cuando sea total, cada ocurrencia de la superclase se va a traducir obligatoriamente en una subclase. Lo indicaré poniendo un círculo encima del triángulo. No se puede guardar nada en la superclase.
 -   `Parcial`. Cada ocurrencia de la superclase puede materializarse o no en una subclase. Es opcional, por lo tanto, no se pone el circulo.
+
+
+| Nombre | Tiene círculo | Tiene arco | Definición |
+| :--- | :--- | :--- | :--- |
+| Total Exclusiva | ✅ | ✅ | Cada ocurrencia general tiene exactamente una (y solo una) especialización |
+| Total Inclusiva | ✅ | ❌ | Cada ocurrencia general tiene al menos una especialización, pero puede tener varias. |
+| Parcial Exclusiva | ❌ | ✅ | Cada ocurrencia general tiene cero o una especialización. Al ser optativo que tenga una especialización, hay que guardar las genéricas | 
+| Parcial Inclusiva | ❌ | ❌ | Cada ocurrencia general puede tener cero, una o varias espcializaciones. Hay que guardar las genéricas. |
