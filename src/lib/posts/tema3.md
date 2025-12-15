@@ -212,9 +212,11 @@ La interrelación anterior se transforma en:
 `ASIGNATURA` (asig, ...)
 `SEMESTRE` (sem, ...)
 `EVALUACIÓN-SEMESTRAL` (est, asig, sem, nota)
-> donde {est} referencia ESTUDIANTE,
-> {asig} referencia ASIGNATURA
-> y {sem} referencia SEMESTRE
+```
+donde {est} referencia ESTUDIANTE,
+{asig} referencia ASIGNATURA
+y {sem} referencia SEMESTRE
+```
 
 Para identificar completamente la relación, la clave debe constar de la clave de estudiante, de la clave de asignatura y de la clave de semestre. Si nos faltase una de las tres, la clave de la relación podría tener valores repetidos. Consideremos, por ejemplo, que no tuviésemos la clave de semestre. Dado que semestre está conectada con “muchos” en la interrelación, puede haber estudiantes que han sido evaluados de una misma asignatura en más de un semestre. Entonces, para estos casos habría valores repetidos en la clave de la relación EVALUACION-SEMESTRAL.
 
@@ -236,9 +238,11 @@ Esta interrelación refleja los destinos que se dan a los maestros de escuela en
 `CURSO` (código-curso, ...)
 `ESCUELA` (código-esc, ...)
 `DESTINO` (código-maestro, código-curso, código-esc)
->  donde {código-maestro} referencia MAESTRO
->  {código-curso} referencia CURSO
->  y {código-esc} referencia ESCUELA
+```
+donde {código-maestro} referencia MAESTRO
+{código-curso} referencia CURSO
+y {código-esc} referencia ESCUELA
+```
 
 No es necesario que la clave incluya código-esc para identificar completamente la relación. Si se fijan un maestro y un curso, no puede haber más de una escuela de destino y, por lo tanto, no habrá claves repetidas.
 
@@ -260,9 +264,11 @@ Veamos un ejemplo de ello:
 - `AULA` (código-aula, ...)
 - `ASIGNATURA` (asig, ...)
 - `CLASE` (código-hora, código-aula, asig, duración)
->  donde {código-hora} referencia HORA-SEMANAL,
->  {código-aula} referencia AULA
->  y {asig} referencia ASIGNATURA
+```
+donde {código-hora} referencia HORA-SEMANAL,
+{código-aula} referencia AULA
+y {asig} referencia ASIGNATURA
+```
 
 En este caso, la clave, a pesar de no incluir el atributo asig, identifica completamente la relación porque para una hora-semanal y un aula determinadas hay una única asignatura de la que se hace clase a esa hora y en esa aula.
 
@@ -271,9 +277,11 @@ En este caso, la clave, a pesar de no incluir el atributo asig, identifica compl
 - `AULA` (código-aula, ...)
 - `ASIGNATURA` (asig, ...)
 - `CLASE` (código-hora, código-aula, asig, duración)
->  donde {código-hora} referencia HORA-SEMANAL,
->  {código-aula} referencia AULA
->  y {asig} referencia ASIGNATURA
+```
+donde {código-hora} referencia HORA-SEMANAL,
+{código-aula} referencia AULA
+y {asig} referencia ASIGNATURA
+```
 
 Ahora la clave incluye el atributo asig y, en cambio, no incluye el atributo código-aula. La relación también queda completamente identificada porque, para una asignatura y hora-semanal determinadas, de aquella asignatura se da clase en una sola aula a aquella hora.
 
@@ -302,20 +310,25 @@ Para la nueva relación DEFENSA, tenemos las tres posibilidades siguientes:
 
 •   Primera opción:
 - `DEFENSA` (trib, est, pro, fecha-defensa)
->  donde {trib} referencia TRIBUNAL,
->  {est} referencia ESTUDIANTE
->  y {pro} referencia PROYECTO-FIN-CARRERA
 
+```
+donde {trib} referencia TRIBUNAL,
+{est} referencia ESTUDIANTE
+y {pro} referencia PROYECTO-FIN-CARRERA
+```
 •   Segunda opción:
 - `DEFENSA` (trib, pro, est, fecha-defensa)
->  donde {trib} referencia TRIBUNAL,
->  {est} referencia ESTUDIANTE
->  y {pro} referencia PROYECTO-FIN-CARRERA
+``` 
+donde {trib} referencia TRIBUNAL,
+{est} referencia ESTUDIANTE
+y {pro} referencia PROYECTO-FIN-CARRERA
+```
 
 •   Tercera opción:
 - `DEFENSA` (est, pro, trib, fecha-defensa)
->  donde {trib} referencia TRIBUNAL,
->  {est} referencia ESTUDIANTE
->  y {pro} referencia PROYECTO-FIN-CARRERA
-
+```
+donde {trib} referencia TRIBUNAL,
+{est} referencia ESTUDIANTE
+y {pro} referencia PROYECTO-FIN-CARRERA
+```
 En los tres casos, es posible comprobar que la clave identifica completamente la relación si se tiene en cuenta la conectividad de la interrelación defensa.
