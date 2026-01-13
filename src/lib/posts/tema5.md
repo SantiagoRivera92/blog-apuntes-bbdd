@@ -99,6 +99,8 @@ Las nuevas tablas creadas pueden ser:
 - Temporales (cuando finalicemos la sesión **son destruídas**)
 - Permanentes
 
+### Selección de datos
+
 `SELECT`
 
 [Enlace a la documentación](https://dev.mysql.com/doc/refman/8.4/en/select.html)
