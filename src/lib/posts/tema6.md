@@ -170,3 +170,14 @@ La segunda tabla incluirá todos sus registros y la primera sólo los relacionad
 
 ###### FULL OUTER JOIN
 
+No existe en MySQL, pero lo podemos simular con la `UNION` de dos `JOIN`.
+
+```sql
+SELECT * FROM animales
+LEFT OUTER JOIN propietarios
+ON animales.propietario=propietarios.dni
+UNION
+SELECT * FROM animales
+RIGHT OUTER JOIN propietarios
+ON animales.propietari=propietarios.dni
+```
