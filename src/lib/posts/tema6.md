@@ -159,8 +159,14 @@ Producto cartesiano. Los valores null son incluídos y combinados.
 ##### OUTER JOIN
 
 
+
 ###### LEFT OUTER JOIN
+
+
 
 ###### RIGHT OUTER JOIN
 
+
+
 ###### FULL OUTER JOIN
+
