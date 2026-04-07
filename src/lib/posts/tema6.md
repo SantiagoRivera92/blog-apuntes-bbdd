@@ -181,3 +181,40 @@ SELECT * FROM animales
 RIGHT OUTER JOIN propietarios
 ON animales.propietari=propietarios.dni
 ```
+
+
+#### Relaciones reflexivas
+
+Consulta sobre la misma tabla.
+
+Diferencias entre INNER JOIN y LEFT/RIGHT OUTER JOIN.
+
+```sql
+SELECT CONCAT(emp.nombre, ' ', emp.apellido1) AS Empleado
+CONCAT(jefe.nombre, ' ', jefe.apellido1) AS Jefe
+FROM Empleados emp
+INNER JOIN Empleados jefe
+ON emp.Codigojefe=jefe.CodigoEmpleado;
+```
+
+Si utilizamos `INNER JOIN`, no aparecerán los empleados sin jefe.
+
+```sql
+SELECT CONCAT(emp.nombre, ' ', emp.apellido1) AS Empleado,
+CONCAT(jefe.nombre, ' ', jefe.apellido1) AS Jefe
+FROM empleados emp
+LEFT OUTER JOIN empleados jefe
+ON emp.Codigojefe=jefe.CodigoEmpleado;
+```
+
+Utilizando un `LEFT OUTER JOIN`, aparecerán los empleados sin jefe. Aparecerán todos los empleados.
+
+```sql
+SELECT CONCAT(emp.nombre, ' ', emp.apellido1) AS Empleado
+CONCAT(jefe.nombre, ' ', jefe.apellido1) AS Jefe
+FROM Empleados emp
+RIGHT OUTER JOIN Empleados jefe
+ON emp.Codigojefe=jefe.CodigoEmpleado;
+```
+
+Utilizando un `RIGHT OUTER JOIN`, aparecerán todos los jefes (incluídos los que no tienen empleados). Aparecerán todos los empleados en la segunda tabla.
