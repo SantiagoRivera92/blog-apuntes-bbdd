@@ -40,6 +40,12 @@ Mientras estamos en formación es aconsejable beneficiarnos de la **interfaz gr�
 El cliente de un SGBD es una aplicación destinada a enviar comandos al SGBD y mostrar los resultados. Puede realizarse por la consola utilizando el modo texto del Sistema Operativo o mediante una interfaz gráfica. El cliente en modo texto de **MySQL** se llama *mysql*.
 
 
+### Maneras de correr un archivo SQL en el servidor:
+
+- En cliente en modo gráfico: Arrastrando el archivo a la pestaña consulta
+- En cliente en modo texto: `SOURCE fichero.sql`
+- En terminal: `mysql -u *usuario* < fichero.sql` 
+
 ## DDL
 
 **Sublenguaje de SQL**. Lenguaje de Definición de Datos encargado de **definir la estructura física** para almacenar los datos:
@@ -99,8 +105,119 @@ Las nuevas tablas creadas pueden ser:
 - Temporales (cuando finalicemos la sesión **son destruídas**)
 - Permanentes
 
+
+
 ### Selección de datos
 
 `SELECT`
 
 [Enlace a la documentación](https://dev.mysql.com/doc/refman/8.4/en/select.html)
+
+
+## Restricciones de la estructura:
+
+- De columna
+    - `PRIMARY KEY`
+    - `REFERENCES`
+    - `NULL/NOT NULL`
+    - `DEFAULT`
+    - `UNIQUE`
+    - `CHECK`
+    - `AUTO_INCREMENT`
+- De tabla
+    - general (sin nombre)
+        - `PRIMARY KEY`
+        - `FOREIGN KEY ... REFERENCES ...`
+    - `CONSTRAINT` (con nombre)
+
+## Características de tabla
+
+- `ENGINE`
+- `AUTO_INCREMENT`
+- `CHARACTER SET`
+- `COLLATE`
+- `CHECKSUM`
+- `COMMENT`
+- `MAX/MIN_ROWS`
+
+## Integridad referencial
+
+Para conseguir integridad referencial, tenemos que cumplir dos condiciones:
+
+- El motor de las tablas tiene que ser `innodb`.
+- Las tablas tienen que estar enlazadas mediante claves ajenas. (`REFERENCES`)
+
+En una clave ajena existen dos eventos:
+
+- `ON DELETE`
+- `ON UPDATE`
+
+Existen para gestionar los borrados y actualizaciones en integridad referencial. Para ambos existen 4 valores:
+
+- `RESTRICT`
+- `CASCADE`
+- `SET NULL`
+- `NO ACTION`
+
+### RESTRICT o SET NULL
+
+`RESTRICT` es una acción por defecto que bloquea intentos de borrar o actualizar un registro padre si existen registros hijos relacionados, generando un error para proteger esos datos. `SET NULL` es sinónima.
+
+### CASCADE
+
+`CASCADE` asegura la coherencia entre tablas, aplicando automáticamente cambios (eliminaciones o actualizaciones) de una fila en una tabla principal a todas las filas relacionadas en tablas secundarias (hijas).
+
+### SET NULL
+
+`SET NULL` al eliminar o actualizar una fila en la tabla principal (padre), establece automáticamente el valor de la clave foránea en la tabla secundaria (hija) a NULL, en lugar de borrar la fila hija o lanzar un error, manteniendo así la integridad pero indicando que la relación se ha roto opcionalmente.
+
+## Modificación de tablas
+
+`ALTER TABLE`
+
+[enlace a la documentación](https://dev.mysql.com/doc/refman/8.4/en/alter-table.html)
+
+### ADD
+
+Añade algo a una tabla
+
+### DROP
+
+Elimina una columna de una tabla
+
+Si vamos a borrar tablas enlazadas hay que hacerlo en el orden correcto. No podemos borrar una columna que está referenciada desde otra tabla.
+
+### MODIFY
+
+Modifica un atributo de una columna de una tabla
+
+### CHANGE
+
+Modifica el nombre de una columna y su tipo de dato
+### RENAME TO
+
+Renombra la tabla o una de sus columnas
+
+## Drop
+
+### DROP TABLE
+
+`DROP TABLE Animales;`
+
+## Rename
+
+### RENAME TABLE
+
+`RENAME TABLE Mascotas TO Animales;`
+
+## Funciones
+
+Las funciones MySQL son códigos que nos permiten generar un resultado asociado, dicho resultado ha de pertenecer a un tipo de dato concreto de los permitidos por el SGBD. En la mayoría de casos será necesario aportar datos iniciales para realizar el proceso,  dichos datos se conocen como parámetros de función.
+
+Ejemplos:
+- ABS()
+- LENGTH()
+- SYSDATE()
+- IFNULL()
+- ISNULL()
+- VERSION()
