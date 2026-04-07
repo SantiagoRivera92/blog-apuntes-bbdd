@@ -75,7 +75,7 @@ Los filtros se constryen mediante expresioens (combinación de operadores, oprea
 
 ### Tipos de subconsultas:
 
-- Comparación (=, >=, <=, <>, >, <, LIKE)
+- Comparación (`=`, `>=`, `<=`, `<>`, `>`, `<`, `LIKE`)
     - Una subconsulta de comparación produce un único valor y debe estar a la derecha del operador.
 - Pertenencia a conjunto (IN)
     - Una subconsulta de pertenencia produce cualquier número de valores, y debe estar a la derecha del operador.
@@ -158,15 +158,15 @@ Producto cartesiano. Los valores null son incluídos y combinados.
 
 ##### OUTER JOIN
 
-
+Admite nulos. 
 
 ###### LEFT OUTER JOIN
 
-
+La primera tabla incluirá todos sus registros y la segunda sólo los relacionados.
 
 ###### RIGHT OUTER JOIN
 
-
+La segunda tabla incluirá todos sus registros y la primera sólo los relacionados.
 
 ###### FULL OUTER JOIN
 
