@@ -218,3 +218,52 @@ ON emp.Codigojefe=jefe.CodigoEmpleado;
 ```
 
 Utilizando un `RIGHT OUTER JOIN`, aparecerán todos los jefes (incluídos los que no tienen empleados). Aparecerán todos los empleados en la segunda tabla.
+
+
+#### Subconsultas correlacionadas
+
+Utilizan referencias externas.
+
+La subconsulta correlacionada se ejecuta tantas veces como filas se procesen en la referencia externa.
+
+Es necesario hacer un nombrado de columnas explícito e unívoco.
+
+
+```sql
+SELECT emp_no, dep_no, oficio, salario
+FROM empleados
+WHERE salario>(
+	SELECT AVG(salario)
+	FROM EMPLEADOS);
+```
+
+La media se calcularía para cada fila.
+
+```sql
+SELECT e1.dep_no, e1.oficio, salario
+FROM empleados e1
+WHERE e1.salario>(
+    SELECT AVG(e2.salario)
+    FROM empleados e2
+    WHERE e2.dep_no=e1.dep_no)+1000;
+```
+
+La media se se calculará para cada fila.
+
+```sql
+EXPLAIN SELECT NAME 
+FROM country 
+WHERE CODE LIKE 'A%';
+```
+
+Esto nos cuenta si la consulta es correlacionada o simple. Si dice DEPENDENT SUBQUERY tenemos una subconsulta correlacionada, si dice SIMPLE es una consulta sencilla.
+
+#### Subconsultas con tablas derivadas
+
+Utilizan sentencias `SELECT` en la cláusula `FROM` en lugar de nombres explícitos de tablas.
+
+Las tablas derivadas son tablas temporales.
+
+Consultas avanzadas.
+
+Sobre las tablas derivadas se pueden aplicar filtros, agrupaciones, etc.
