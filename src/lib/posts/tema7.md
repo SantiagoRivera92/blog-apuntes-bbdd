@@ -66,3 +66,15 @@ Usuarios/cuentas
 - Cambiar contraseña
 
 Buscar los comandos para hacer estas operaciones.
+
+Para crear un usuario sin contraseña:
+
+```sql
+CREATE USER santi;
+```
+
+Para crear un usuario con contraseña:
+
+```sql
+CREATE USER santi IDENTIFIED BY 'asdf';
+```
