@@ -12,19 +12,21 @@ categories:
 # Tablas de la base de datos mysql:
 
 `procs_priv`: todos los permisos que se han otorgado a nivel de programa
+
 `user`: todas las rutinas de todas las bases de datos
+
 `db`: los permisos para todas las rutinas de una base de datos
 
 ## Bloques de código
 
-- anónimos
+### Anónimos
 
 ```sql
 SELECT dept_no, dept_name
 FROM departments;
 ```
 
-- rutinas almacenadas
+### Rutinas almacenadas
 
 ```sql
 USE employeespractica2526;
@@ -46,11 +48,11 @@ Para llamar al procedimiento, hacemos lo siguiente:
 CALL department_getList2();
 ```
 
-## Variables:
+## Variables
 
-### De Usuario
+### Variables de usuario
 
-sin existencia fuera de la sesión de usuario actual (sesión)
+Sin existencia fuera de la sesión de usuario actual (sesión)
 
 ```sql
 SELECT SUM(PrecioUnidad * Cantidad)
@@ -60,7 +62,7 @@ FROM detallepedidos;
 SELECT @totalFacturado;
 ```
 
-`@totalFracturado` es una variable de usuario.
+> `@totalFracturado` es una variable de usuario.
 
 ```sql
 SET @var1:=10001;
@@ -68,7 +70,7 @@ SET @var1:=10001;
 SELECT * FROM employees WHERE emp_no=@var1;
 ```
 
-`@var1` es una variable de usuario.
+> `@var1` es una variable de usuario.
 
 ```sql
 SET @salarioMinimo = 10000;
@@ -100,7 +102,7 @@ SELECT salary INTO @s FROM salaries;
 SELECT @s AS 'Salario';
 ```
 
-Esto crashea: En una variable **sólo se puede introducir un único valor**, sin varias columnas o filas.
+> Esto crashea: En una variable **sólo se puede introducir un único valor**, sin varias columnas o filas.
 
 ```sql
 SELECT MAX(salary), MIN(salary)
@@ -111,7 +113,7 @@ SELECT @maximo AS 'Salario Maximo',
 @minimo AS 'Salario Minimo';
 ```
 
-Podemos utilizar variables usando otras variables
+> Podemos utilizar variables usando otras variables
 
 ```sql
 set @dept_no = 'D999',
@@ -122,7 +124,7 @@ set @cadenaCompleta = CONCAT(@dept_no, ' --> ', @dept_name);
 select @cadenaCompleta;
 ```
 
-Cuenta de usuario con más conexiones abiertas al servidor y el número de conexiones.
+> Cuenta de usuario con más conexiones abiertas al servidor y el número de conexiones.
 
 ```sql
 SET @usuario:='', @conexiones:=0;
@@ -140,38 +142,7 @@ SELECT @usuario as 'Usuario',
 
 
 
-- **locales** / **de bloque**: sin existencia fuera del bloque donde se declaran (bloque)
-
-```sql
-
-```
-
-- **globales**: 
-
-```sql
-
-```
-
-
-### Estructuras de control
-
-#### Condicionales
-
-- IF-THEN-ELSEIF-THEN-ELSE-END IF;
-- CASE-WHEN-THEN-ELSE-END CASE;
-
-#### Repeticiones
-
-- WHILE-DO-END WHILE;
-- REPEAT-UNTIL-END REPEAT;
-- LOOP-END LOOP;
-- LEAVE, ITERATE
-
-#### Etiquetas
-
-- :
-
-### Locales / De Bloque
+### Variables locales / de bloque
 
 Sin existencia fuera del bloque donde se declaran (bloque)
 
@@ -192,4 +163,80 @@ CALL department_getList4();
 SELECT d;
 ```
 
-La variable `d` sólo está disponible dentro del bloque delimitado por `BEGIN` y `END`, por lo que `SELECT d` dará un error.
+> La variable `d` sólo está disponible dentro del bloque delimitado por `BEGIN` y `END`, por lo que `SELECT d` dará un error.
+
+```sql
+DELIMITER $$
+CRETE PROCEDURE department_getList3()
+BEGIN
+    DECLARE d CHAR(4);
+    SET d := 'd002';
+    SELECT dept_name
+    FROM departments
+    WHERE dept_no=d
+END$$
+DELIMITER ;
+
+CALL department_getList3();
+```
+
+### Globales
+
+Pertenecen al servidor general. 
+
+```sql
+SHOW GLOBAL VARIABLES LIKE 'max_%';
+SET GLOBAL max_conncetions=1000;
+
+SHOW GLOBAL VARIABLES like 'max_%';
+SET GLOBAL max_connections=DEFAULT;
+
+SHOW GLOBAL VARIABLES LIKE 'max_%';
+SELECT @@GLOBAL.max_connections;
+```
+
+> `SHOW GLOBAL VARIABLES` para mostrar variables globales, `SET GLOBAL` para darles valor, `SELECT @@GLOBAL.{nombre}` para mostrarlas.
+
+#### Ficheros para mostrar las variables globales:
+
+| Nombre fichero | OS |
+| --- | --- |
+| my.ini | Windows |
+| my.cnf | Linux |
+
+
+### Estructuras de control
+
+#### Condicionales
+
+- IF-THEN-ELSEIF-THEN-ELSE-END IF;
+- CASE-WHEN-THEN-ELSE-END CASE;
+
+#### Repeticiones
+
+- WHILE-DO-END WHILE;
+- REPEAT-UNTIL-END REPEAT;
+- LOOP-END LOOP;
+- LEAVE, ITERATE
+
+#### Etiquetas
+
+- :
+
+## Parámetros
+
+Parámetro formal vs. parámetro real/valor
+
+### Tipos de parámetros
+
+- Entrada
+- Salida
+- E/S
+
+#### Entrada:
+
+Usamos la palabra reservada `IN` o no ponemos nada (es el tipo por defecto)
+
+#### Salida
+
+Usamos la palabra reservada `OUT`
