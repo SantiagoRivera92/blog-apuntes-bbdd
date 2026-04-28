@@ -78,3 +78,130 @@ Para crear un usuario con contraseña:
 ```sql
 CREATE USER santi IDENTIFIED BY 'asdf';
 ```
+
+### Borrar usuarios
+
+```sql
+DROP USER 'santi'@'localhost';
+```
+
+### Renombrar usuarios
+
+```sql
+rename user 'nacho2'@'%' to 'nachonuevo'@'localhost';
+```
+
+## Autenticación y permisos en MySQL
+
+MySQL utiliza principalmente seguridad nativa, que es la definida en el núcleo del propio servidor. Exist ela posibilidad de integrarla con la seguridad del SO.
+
+El servidor trabaja con cuentas y permisos almacenados ambos en la base de datos mysql creada en la instalación.
+
+La identidad se determina mediante el equipo desde el que se realiza la conexión y el nombre de usuario utilizado para el login. Y selecciona la dupla Host, User más específica que concuerde con los datos de login.
+
+El acceso se divide en 2 etapas: comprobación de identidad y obtención de permisos.
+
+`USER()` devuelve la cuenta introducida por el usuario en el login, `CURRENT_USER()` devuelve la cuenta que se está utilizando. Suelen coincidir pero no siempre, ya que el proceso de login se basa en devolver la cuenta con el host más concreto.
+
+```sql
+SELECT * FROM mysql.user;
+SELECT host,user FROM mysql.user;
+SELECT USER();
+SELECT CURRENT_USER();
+```
+
+## Privilegios
+
+Estructura de permisos en MySQL:
+
+- GRANT
+    - privilegios (listado de privilegios)
+    - ON (objeto sobre el que se aplica)
+    - TO (usuario al que se le asignan los privilegios)
+    - WITH (limitaciones en la cuenta de usuario)
+
+- REVOKE
+    - privilegios (lista de privilegios)
+    - ON (objeto sobre el que se aplica)
+    - FROM (usuario al que se le quitan los privilegios)
+
+Hay 4 niveles de permisos: global, base de datos, tablas y columnas.
+
+### A nivel global
+```sql
+GRANT privilegios
+ON *.*
+TO nombre_usuario;
+```
+
+```sql
+REVOKE privilegios 
+ON *.*
+FROM cuenta_usuario
+``` 
+### A nivel base de datos
+```sql
+GRANT privilegios
+ON base_datos.*
+TO nombre_usuario;
+```
+
+```sql
+REVOKE privilegios
+ON base_datos.*
+FROM nombre_usuario;
+```
+
+### A nivel tabla
+```sql
+GRANT privilegios
+ON base_datos.nombre_tabla
+TO nombre_usuario;
+```
+
+```sql
+REVOKE privilegios
+ON base_datos.nombre_tabla
+FROM nombre_usuario;
+```
+### A nivel columna
+```sql
+GRANT privilegios (columna)
+ON base_datos.tabla
+TO usuario;
+```
+
+```sql
+REVOKE privilegios (columna)
+ON base_datos.tabla
+FROM usuario;
+```
+
+### Permisos especiales
+
+`USAGE` y `GRANT OPTION`
+
+El primero indica que la cuenta puede acceder al servidor (pero no trabajar con los objetos).
+
+El segundo indica que podemos ceder los permisos que tenemos concedidos a otros usuarios.
+
+
+Para recargar privilegios:
+
+```sql
+FLUSH PRIVILEGES;
+```
+
+También podemos usar los siguientes comandos:
+
+```sh
+mysqladmin -u root flush-privilages
+```
+
+```sh
+mysqladmin -u root reload
+```
+
+Sin embargo reload está deprecated y puede dejar de funcionar.
+
+
