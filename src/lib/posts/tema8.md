@@ -346,3 +346,24 @@ END $$
 DELIMITER ;
 ```
 
+
+### Parámetros y salida avanzados
+
+Tipos de variables en MySQL
+
+`mysql -e "<SQL>" > <fichero>`
+
+- S.O.:
+    - cmd
+    - shell
+
+- S.O. con redirección:
+    - `into outfile '<fichero>'`
+
+- intérprete SGBD
+    - mysql
+    - interfaz gráfica
+
+
+# Deberes
+Buscar qué es un cursor
