@@ -260,4 +260,89 @@ Los procedimientos estarán asociados siempre a una base de datos en concreto
 Un procedimiento no devuelve ningún valor.
 
 
-Mirar en qué se parecen y diferencian los procedimientos y las funciones.
+### Estructuras funcionales: Funciones
+
+Funciones deterministas y no deterministas
+
+Parámetros y funciones
+
+- `FUNCTION`
+    - `CREATE`
+    - `SHOW`
+        - `FUNCTION STATUS`
+        - `CREATE FUNCTION`
+    - `ALTER`
+    - `DROP`
+
+Son rutinas que, al ejecutarse, devuelven un dato asociado a su nombre y lo recibe quien hace la llamada a la función.
+
+Se pueden usar dentro de funciones SQL, y son más rápidas de ejecutar que los procedimientos.
+
+Con `RETURNS` indicamos el tipo de dato que devolvemos y con `DETERMINISTIC` indicamos que la función es determinista, es decir, que para la misma entrada siempre obtenemos la misma salida.
+
+Dentro del cuerpo de la función tenemos que utilizar un `RETURN` para devolver el dato.
+
+Para usar una función se hace igual que con las funciones del lenguaje (`AVG`, `MAX`, etc)
+
+```sql
+DELIMITER //
+CREATE FUNCTION ejemploFuncion2() RETURNS CHAR(7) DETERMINISTIC
+BEGIN
+    return 'Ejemplo'
+END //
+DELIMITER ;
+
+SELECT CONCAT(first_name, ejemploFuncion2()) FROM employees;
+```
+
+#### Códigos importantes para trabajar con funciones
+
+- `SHOW FUNCTION STATUS`
+- `SHOW CREATE FUNCTION <nombre>`
+- `ALTER FUNCTION <nombre>`
+- `DROP FUNCTION <nombre>`
+
+##### Ejemplo
+
+```sql
+DELIMITER $$
+CREATE FUNCTION department_getName(numero char(4)) RETURNS varchar(40) DETERMINISTIC
+BEGIN
+    DECLARE nombre varchar(40) default 'DESCONOCIDO';
+
+    SELECT dept_name
+        INTO nombre
+        FROM departments
+    WHERE dept_no=numero;
+
+    RETURN nombre;
+END $$
+DELIMITER ;
+```
+
+##### Casos de uso
+
+```sql
+SELECT department_getName('d16');
+
+SET @nombre = department_getName('d009');
+SELECT @nombre;
+
+SELECT department_getName(dept_no) FROM departments;
+
+SELECT emp_no FROM dept_manager WHERE depatrment_getName(dept_no) LIKE 'Development' AND to_date>=CURDATE();
+```
+
+#### employee_getMaxSalary
+
+```sql
+DELIMITER $$
+CREATE FUNCTION employee_getMaxSalary(numero INT(11) RETURNS INT(11) DETERMINISTIC)
+BEGIN
+    DECLARE sueldo int default -1;
+    SELECT max(salary) INTO sueldo FROm salaries WHERE emp_no=numero;
+    RETURN sueldo;
+END $$
+DELIMITER ;
+```
+
