@@ -239,4 +239,25 @@ Usamos la palabra reservada `IN` o no ponemos nada (es el tipo por defecto)
 
 #### Salida
 
-Usamos la palabra reservada `OUT`
+Usamos la palabra reservada `OUT`. Sirve para poder trabajar con variables y obtener un valor fuera del procedimiento.
+
+#### E/S
+
+Usamos la palabra reservada `INOUT`. Sirve para poder sacar valores de la rutina y también introducirlos en la rutina.
+
+
+### Estructuras funcionales: Procedimientos
+
+Los procedimientos estarán asociados siempre a una base de datos en concreto
+
+- `PROCEDURE`
+    - `CREATE`
+    - `SHOW`
+    - `ALTER`
+    - `DROP`
+    - `CALL`
+
+Un procedimiento no devuelve ningún valor.
+
+
+Mirar en qué se parecen y diferencian los procedimientos y las funciones.

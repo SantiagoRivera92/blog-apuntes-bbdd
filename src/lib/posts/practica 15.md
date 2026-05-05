@@ -7,8 +7,20 @@ categories:
 	- Bases de datos
 ---
 
-|  | Apache Cassandra | Redis | MongoDB
+|  | Apache Cassandra | Redis | MongoDB |
 | --- | --- | --- | --- |
 | ¿Qué es? | | | |
 | ¿Cómo se instala? | | | |
 | Herramientas IA <br>para practicar online | | | |
+
+- Características de las bases de datos no relacionales
+- Diferencias de las bases de datos no relacionales y SQL
+- Tipos de bases de datos no relacionales
+- Formatos de ficheros asociados a bases de datos no relacionales
+
+Para cada SGBD, añadir lo siguiente:
+
+- Logo
+- URL
+- Pantallazo
+- Párrafo descriptivo
