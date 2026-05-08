@@ -364,6 +364,163 @@ Tipos de variables en MySQL
     - mysql
     - interfaz gráfica
 
+#### Desde el S.O.
 
-# Deberes
-Buscar qué es un cursor
+`mysql -u root -e "select gender from employeespractica2324.employees where emp_no=10001;" > sexo.txt`
+
+> Esto lo crea en el directorio actual con cabecera
+
+#### Desde el S.O. (con redirección)
+
+`mysql -u root -p -e "select gender from employeespractica2324.employees where emp_no=10001 into outfile '2.txt';"`
+
+> Esto lo crea en el directorio data y sin cabecera
+
+#### Desde un cliente de MySQL.
+
+`select * from employees into outfile 'empleados.txt'`
+
+> Esto lo crea en la carpeta de la bases de datos con la que estoy trabajando y sin cabeceras
+
+---
+
+## Cursores
+
+- `CURSOR`
+    - `DECLARE`
+    - `OPEN`
+    - `FETCH`
+    - `CLOSE`
+
+Un cursor nos permite trabajar con más de un registro a la vez. Es una estructura en memoria ram que nos permite recorrer fila a fila el resultado, guardando los datos de cada fila en variables. El procesado de un cursor suele ser similar en todos los SGBD que los soportan. 
+
+Estos son los pasos necesarios:
+
+- Declarar el cursor, reservar memoria ram y definir el manejador de excepciones
+- Abrir el cursor, ejecutar el código SQL y situarse en el primer resultado devuelto
+- Recorrer el cursor hasta que no haya más filas
+- Cerrar el cursor y librar recursos
+
+La forma que tiene MySQL de saber si ha llegado al final del cursor es capturando una excepción.
+
+
+```sql
+DELIMITER $$
+CREATE PROCEDURE cursores1()
+BEGIN
+    DECLARE varA VARCHAR(14);
+    DECLARE varB VARCHAR(16);
+    
+    DECLARE done INT DEFAULT FALSE;
+    -- Declaramos el cursor y reservamos la memoria RAM
+    DECLARE nombreCursor CURSOR FOR SELECT first_name, last_name FROM employees WHERE emp_no<10100;
+    -- Definimos el manejador de excepciones
+    DECLARE CONTINUE HANDLER FOR NOT FOUND SET done = TRUE; 
+
+    -- Abrimos el cursor, ejecutamos el código SQL y nos situamos en el primer resultado
+    OPEN nombreCursor;
+    -- Recorremos el cursor registro a registro
+    read_loop: LOOP
+        -- Recuperamos las columnas de cada registro en varA y varB
+        FETCH nombreCursor INTO varA, varB;
+        IF done THEN
+            LEAVE read_loop;
+        END IF;
+        SELECT CONCAT(varA, ' ', varB);
+    END LOOP
+    -- Cerramos el cursor y liberamos los recursos.
+    CLOSE nombreCursor;
+END $$
+DELIMITER ;
+
+CALL cursores1();
+```
+
+## Errores y excepciones
+
+Durante la ejecución pueden aparecer errores que detengan la ejecución. MySQL permite capturar esos errores y tratarlos.
+
+Si por ejemplo intentnamos dar de alta con un insert una clave primaria que ya existe, nos dirá que la clave primaria está duplicada y se rompe la ejecución.
+
+```sql
+DELIMITER $$
+CREATE PROCEDURE employee_add(numEmp int, fechaNac date, nombre varchar(14), apellidos varchar(16), mujer boolean)
+BEGIN
+    DECLARE error boolean default false;
+    DECLARE genero char(1);
+
+    IF(mujer) THEN
+        SET genero = 'F';
+    ELSE
+        SET genero = 'M';
+    END IF;
+
+    INSERT INTO employees(emp_no, birth_date, first_name, last_name, gender, hire_date)
+    VALUES (numEmp, fechaNac, nombre, apellidos, genero, CURDATE());
+    IF (error) THEN
+        SELECT -1, 'Clave primaria duplicada';
+    ELSE
+        SELECT 0, 'Fila añadida';
+    END IF;
+END$$
+```
+
+## Otras rutinas
+
+Además de los procedimientos y las funciones encontramos otros tipos de rutinas almacenadas en los SGBD relacionales como son:
+
+- Disparadores o triggers (`acción DML <tabla>`)
+- Vistas (`datos <BD>`)
+- Eventos (`calendario <servidor>`)
+
+### Triggers
+
+- Uso:
+    - CREATE
+    - ALIAS
+    - Ordenación
+
+- SHOW
+    - TRIGGERS
+    - CREATE TRIGGER
+    - INFORMATION_SCHEMA.TRIGGERS
+
+Es una rutina avanzada que se va a ejecutar cuando sobre una tabla se realice alguna operación DML. Hemos de indicar una temporalidad (antes o después) con las palabras reservadas `BEFORE` o `AFTER`. 
+
+Existen limitaciones: 
+- Los triggers no se ejecutan en cascada. 
+- En MySQL, se ejecutan una vez por cada fila. 
+- No podemos utilizar transacciones dentro de los triggers
+- En versiones antiguas de MySQL no pueden existir dos triggers con el mismo nombre
+
+
+### ¿Para qué se usan los triggers?
+
+Los disparadores se usan (normalmente) para:
+
+- Hacer control de sesiones, como controlar en variables de usuario el trabajo que se está realizando desde cliente.
+- También se utilizan para auditar los usuarios (monitorizar qué está haciendo cada usuario).
+- Para verificar los datos antes de utilizarlos.
+- Para generar estadísticas e informes en tiemo real.
+- Para generar copias de seguridad de los datos antes de que sean modificados o borrados.
+
+Para crear triggers, necesitamos el permiso `TRIGGER`. Tenemos que saber que existen dos alias: `NEW` y `OLD`, que según la operación que estemos realiazndo harán referencia a los valores nuevos y a los valores antiguos.
+
+No es posible modificar disparadores: Tenemos que borrarlo y volver a crearlo.
+
+```sql
+DELIMITER $$
+CREATE TRIGGER departments_BEFORE_INSERT
+BEFORE INSERT
+ON departments
+FOR EACH ROW
+BEGIN
+    IF (CHAR_LENGTH(NEW.dept_name)<5) then
+        CALL `'Nombre de departamento menor de 5 caracteres'`;
+    END IF;
+END$$
+DELIMITER ;
+
+insert into departments values('d000', 'a');
+insert into departments values('d000', 'abcdef')
+```
