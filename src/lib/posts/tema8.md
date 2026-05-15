@@ -524,3 +524,130 @@ DELIMITER ;
 insert into departments values('d000', 'a');
 insert into departments values('d000', 'abcdef')
 ```
+
+## Eventos programados
+
+Se basan en una marca temporal.
+
+Los eventos son tareas que se ejecutan en base a una marca horaria definida previamente. Antes de la versión 5.7 no existen en el SGBD MySQL tal y como nosotros los vamos a tratar. Un evento se identificará por su nombre, está asociado a una base de datos y se ejecuta en una marca de tiempo determinada, una única vez o periódicamente. Un evento ejecuta una instrucción SQL o un conjunto de instrucciones SQL formado por un bloque BEGIN … END.
+
+Aparecen en MySQL v5.7
+
+`Show variables like ‘event_scheduler’;` (valor actual) 
+
+`Show processlist` (tareas de ejecución)
+
+`Set evento_scheduler=ON|OFF|DISABLED;` (configurar valor)
+
+Para poder crear eventos programados y que estos se ejecuten es necesario hacer uso de la variable global evento scheduler.
+
+    - **OFF**: El hilo que se encarga de ejecutar los eventos está desactivado y por lo tanto no se ejecutará ningún evento. La tarea `event_scheduler` no se muestra con la orden SHOW PROCESSLIST. Es el valor por defecto. Para activar el planificador de eventos debemos dar el valor `ON` a esta variable.
+
+```sql
+SET GLOBAL event_scheduler = OFF
+```
+
+    - **ON**: El planificador de eventos está iniciado. En este caso aparecerá como un proceso más al ejecutar la orden `SQL SHOW PROCESSLIST`
+
+    - **DISABLED**: En este caso el planificador de eventos no podría ser activado dinámicamente cambiando el valor de la variable global a `ON`. Sólo sería posible desde el fichero de configuración del servidor MySQL.
+
+```sql
+SELECT VERSION();
+```
+
+```sql
+SHOW GLOBAL VARIABLES LIKE 'event_scheduler';
+```
+
+```sql
+SHOW PROCESSLIST;
+```
+
+La orden SQL para crear eventos es CREATE EVENT. Se necesita el privilegio EVENT sobre la base de datos.
+
+```sql
+/*Accede con root y crear: Un usuario llamado programador1 con todos los permisos globales asignados*/ 
+CREATE USER programador1@localhost; 
+GRANT ALL PRIVILEGES  
+ON *.* TO programador1@localhost; 
+
+/*Un usuario programador2 con todos los permisos globales asignados menos EVENT*/
+CREATE USER programador2@localhost; 
+GRANT ALL PRIVILEGES  
+ON *.* TO programador2@localhost; 
+REVOKE EVENT ON *.* FROM programador2@localhost; 
+
+FLUSH PRIVILEGES; 
+
+CREATE EVENT myevent 
+
+ON SCHEDULE AT CURRENT_TIMESTAMP + INTERVAL 1 HOUR -- Si uso AT se ejecuta el evento una unica vez 
+EVERY -- Si se usa EVERY se deberá indicar la frecuencia 
+    ON COMPLETION [NOT] PRESERVE -- Con el NOT se borra una vez ejecutado sin el NOT se preserva 
+DO 
+
+UPDATE myschema.mytable SET mycol = mycol + 1; 
+```
+
+```sql
+/*Crear un evento le ponemos marca temporal de que se ejecute una unica vez (AT)  
+en la fecha y hora actuales + 20 segundo, Lo que haces es actualizar la la tabla  
+mytable a la columna mycol le suma 100*/ 
+CREATE EVENT myevent33 
+ON SCHEDULE AT CURRENT_TIMESTAMP + INTERVAL 20 SECOND  
+DO 
+    UPDATE myschema.mytable SET mycol = mycol + 100; 
+```
+
+Se borran por defecto, si quiero que se preserve se debe especificar.
+
+```sql
+CREATE EVENT myevent10  
+ON SCHEDULE EVERY 12 HOUR  
+STARTS CURRENT_TIMESTAMP + INTERVAL 30 MINUTE  
+ENDS CURRENT_TIMESTAMP + INTERVAL 4 WEEK 
+ON COMPLETION PRESERVE 
+DO
+    UPDATE myschema.mytable SET mycol = mycol + 1; 
+
+/*Crear un evento que meta en la tabla empleados_mes  
+los empleados de ese mes */	 
+
+DELIMITER \\ 
+CREATE EVENT empleados_del_mes  
+ON SCHEDULE  
+EVERY 1 MONTH 
+COMMENT 'Guarda los empleados contratados en el mes anterior' 
+DO 
+
+BEGIN 
+    INSERT INTO empleados_mes (nombre) 
+    SELECT CONCAT(first_name,' ',last_name) 
+    FROM employeespractica2324.employees 
+    WHERE hire_date >= DATE_SUB(NOW(), INTERVAL 1 MONTH); 
+END\\ 
+
+DELIMITER ;	 
+
+
+/*Crear un evento que regale 100 euros, dentro de un mes 
+a las nuevas cuentas creadas durante los proximos 30 dias*/ 
+
+DELIMITER \\ 
+CREATE EVENT regalo_100_euros  
+ON SCHEDULE  
+AT CURRENT_TIMESTAMP + INTERVAL 1 MONTH  
+DO 
+    UPDATE ebanca.cliente 
+    SET saldo = saldo + 100 WHERE fecha_creacion 
+    BETWEEN NOW() AND DATE_ADD(NOW(), INTERVAL -1 MONTH); 
+
+$$ 
+
+DELIMITER ; 
+```
+
+```sql
+DROP EVENT 
+SHOW EVENT
+```
